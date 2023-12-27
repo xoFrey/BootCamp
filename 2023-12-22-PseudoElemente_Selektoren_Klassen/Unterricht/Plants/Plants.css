@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: url(../../../0assets/img/section.h2d-278b1f22.jpg) no-repeat
+    center;
+  background-size: cover;
+  color: white;
+}
+
+h1 {
+  padding: 20px 0 230px 115px;
+}
+
+header div {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto 110px auto;
+}
+
+/* Feste Struktuer Margin bottom also sachen runter drücken wenn man abstand braucht - Für Abstände */
+/* am besten nicht mixen mit margin top  */
+header div h2 {
+  width: 200px;
+  margin: 0 auto 20px auto;
+}
+
+header div p {
+  margin-bottom: 20px;
+}
+
+header div a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 15px;
+}
+
+header ul {
+  text-align: right;
+  list-style: none;
+  padding: 0 115px 50px 0;
+}
+
+header ul li {
+  padding: 10px;
+}

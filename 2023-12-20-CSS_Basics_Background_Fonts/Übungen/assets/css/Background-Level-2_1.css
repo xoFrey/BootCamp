@@ -1,0 +1,11 @@
+section {
+  background-image: url(../img/photo-1460602594182-8568137446ce.avif);
+  color: white;
+  text-align: center;
+  background-size: contain;
+}
+
+article {
+  background: url(../img/astifcle.avif) no-repeat right;
+  background-size: contain;
+}

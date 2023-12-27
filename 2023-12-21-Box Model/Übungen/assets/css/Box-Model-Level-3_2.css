@@ -1,0 +1,165 @@
+/* Werte werden so auf 0 gesetzt und man hat keinen weißen Rand */
+@font-face {
+  font-family: Fredericka;
+  src: url(../../../../0assets/fonts/Fredericka_the_Great/FrederickatheGreat-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../../../../0assets/fonts/OpenSans/OpenSans-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 811px;
+  background: url(../../../../0assets/img/section.h2d-278b1f22.jpg) no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: Fredericka;
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  color: #fff;
+  width: 300px;
+  height: 72px;
+  padding: 0px 42.3px 0px 42.48px;
+  margin: 300px auto 25px auto;
+}
+
+header p:nth-of-type(1) {
+  color: white;
+  padding: 20px;
+  margin-left: 115px;
+  font-family: Fredericka, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 40px;
+}
+
+header p:nth-of-type(2) {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-family: OpenSans, Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0px 0.42px 0px 0.61px;
+}
+
+/* button {
+  text-align: center;
+  padding: 11px 31.66px 11px 30px;
+  background-color: transparent;
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  margin: 15px auto;
+  display: block;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.493);
+}
+
+button:active {
+  background-color: rgba(109, 109, 109, 0.606);
+} */
+
+article a {
+  font-family: OpenSans, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  padding: 11px 31.66px 11px 30px;
+  width: 150px;
+  display: block;
+  text-align: center;
+  margin: 15px auto;
+}
+
+nav a {
+  font-family: OpenSans, Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+ul {
+  color: white;
+  list-style: none;
+  text-align: right;
+  margin: auto 115px;
+}
+
+ul li {
+  padding: 10px;
+}
+
+h2 {
+  font-family: Fredericka;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  margin-top: 50px;
+}
+
+main article p:nth-of-type(1) {
+  font-family: OpenSans, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  width: 584px;
+  margin: 50px auto;
+}
+
+main div {
+  border: 5px solid black;
+  margin: auto;
+  width: 210px;
+  height: 118px;
+  color: black;
+  text-align: center;
+  padding: 23px;
+}
+
+main div p {
+  font-family: OpenSans;
+}
+main div p:nth-of-type(1) {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main div p:nth-of-type(2) {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+footer {
+  color: white;
+  height: 176px;
+  background-color: #3a3b4a;
+  margin-top: 27px;
+}
+
+footer section p {
+  font-family: OpenSans;
+  font-size: 16;
+  width: 750px;
+  padding: 41px 25px 14px 25px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+footer section div a {
+  padding: 11px 30.5px 11px 31px;
+  font-family: OpenSans, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  border: 1px solid white;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin-left: 25px;
+}

@@ -1,0 +1,96 @@
+/* article p {
+  background-color: red;
+}
+
+article a {
+  background-color: aqua;
+}
+
+button {
+  background-color: burlywood;
+}
+/* :wenn man alle gleich haben will, kann man sie mit kommas abtrennen */
+/* h1,
+h2,
+h3,
+h4 {
+  background-color: cadetblue;
+  color: aliceblue;
+}
+
+section {
+  background-color: bisque;
+}  */
+
+/* So gebe ich allen Fonts meine Schriftart */
+html {
+  font-family: IzelsSuperFont, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* # body {} bekommt nie einen style!!! */
+
+/* :Pseudoselektoren - letztes Element von allen ul in allen sections*/
+
+section ul li:last-child {
+  background-color: pink;
+}
+
+/* nimmt das letzte Element von jeweiligen typen */
+
+section:last-child h2:last-of-type {
+  background-color: rgb(71, 182, 145);
+}
+
+h1 {
+  background-color: rgb(190, 239, 172);
+}
+
+/* Bunnt das Element was in der Klammer steht (2) - Nur zahlen eintragen  */
+section ul li:nth-of-type(3),
+section ul li:nth-of-type(5) {
+  background-color: rgb(255, 117, 186);
+  color: rgb(255, 211, 211);
+}
+
+section {
+  background-color: rgb(171, 119, 248);
+  /* Width bestimmt die breite der Section (ansonsten ist es 100% der breite) */
+  /* Man kann auch mit Prozent arbeiten, aber pixel grade etwas einfacher */
+  width: 500px;
+  /* Höhe wird automatisch mit dem Content bestimmt, daher feste höhen vorsichtig benutzen */
+  /* height: 200px; */
+}
+
+/* Dekorative Bilder als Background-image, Content-Informationsbilder als img tag in html */
+/* Background images wiederholen sich */
+footer article {
+  height: 200px;
+
+  /* Kurzschreibweise - reihenfolge egal */
+  background: url("../../assets/img/Cute-Cat-icon.png") no-repeat left;
+
+  /* background-image: url("../../assets/img/Cute-Cat-icon.png");
+  background-repeat: no-repeat;
+  background-position: top left; */
+
+  /* benötigen wir um das ganze Bild anzuzeigen */
+  background-size: contain;
+}
+
+/* *Fonts einbinden */
+@font-face {
+  /* Am besten den originalen Namen der Font nutzen */
+  font-family: IzelsSuperFont;
+  src: url(../fonts/SourceCodePro-Regular.ttf);
+}
+
+footer h2 {
+  font-size: 20px;
+  text-decoration: underline;
+  /* erste beiden werte sind x und Y werte, dritter wert blurr wert */
+  /* text-shadow: 5px 5px 4px black; */
+  /* text shadow nur einmal verwenden */
+  text-shadow: 0px 0px 4px rgb(10, 247, 25);
+  letter-spacing: 10px;
+  word-spacing: 5px;
+}

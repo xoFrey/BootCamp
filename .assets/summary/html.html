@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./summary.html">Back to summary</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>HTML Zusammenfassung</h1>
+      <section>
+        <h3>Verschiedene tags:</h3>
+        <ul>
+          <li>Links erstellen: a-tag "< a href="#">Home < / a > "</li>
+          <li>Für # kann man den dynamischen oder absoluten Pfad eintragen</li>
+          <li>
+            Dynamischer Pfad:
+            <ul>
+              <li>Bsp: ". / summary.html" (Pfad zu einer Datei)</li>
+            </ul>
+          </li>
+          <li>
+            Absoluter Pfad:
+            <ul>
+              <li>Bsp. "https:www.super-code.de" (URL)</li>
+            </ul>
+          </li>
+          <li>
+            h1-h6 tag für Überschriften
+            <ul>
+              <li>h1 nur einmal pro Seite verwenden</li>
+            </ul>
+          </li>
+          <li>"< nav > < / nav >" - Navigationsleiste</li>
+          <li>p - tag - Für plain text</li>
+          <li>
+            image: < img src="" alt="" > - self closing
+            <ul>
+              <li>"alt" steht für alternativer text für Screenreader</li>
+            </ul>
+          </li>
+          <li>
+            div - Zum unterteilen, wenn es sinn macht
+            <ul>
+              <li>besser mit article, section etc arbeiten</li>
+            </ul>
+          </li>
+          <li>
+            < span >< /span > - für Hervorhebungen in Css (nur in kombi mit
+            anderen tags, nie alleine)
+          </li>
+          <!-- Buttons werden nur bentutzt, wenn man eine JS funktion lostreten will, ansonsten werden a-tags genutzt -->
+          <li>"< button>Hallo< /button >"</li>
+          <!-- Passwörter, Numbers etc.  -->
+          <li>
+            "< input placeholder="Halloo" type="password" name="" id="" / >""
+          </li>
+          <!-- Steht über ein Inputfeld um es zu beschriften -->
+          <li>< label for="Hallo">Hallo Welt< /label ></li>
+          <!-- größeres inputfeld -->
+          <li>
+            < textarea name="Hallo" id="" cols="30" rows="10"> < /textarea >
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Listen</h3>
+        <p>Es gibt zwei Arten von Listen:</p>
+        <p>Die ordered List:</p>
+        <ol>
+          <li>Befehl "< ol >...< /ol >"</li>
+          <li>Und dazwischen "< li > ... < /li >"</li>
+        </ol>
+        <p>Und die unordered List:</p>
+        <ul>
+          <li>Befehl "< ul >...< /ul >"</li>
+          <li>Und dazwischen "< li > ... < /li >"</li>
+          <li>
+            Zum verschachteln von Listen:
+            <ul>
+              <li>"< li > In list item < ul >...< /ul > < /li >"</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Block Elemente und Inline Elemente</h3>
+
+        <h4>Beispiele für Block elemente</h4>
+        <p>Nehmen 100% Breite der Seite ein</p>
+        <!-- -Block Element nimmt 100% breite der Seite ein -->
+        <!-- Werden immer untereinander aufgelistet -->
+        <ul>
+          <li>article</li>
+          <li>section</li>
+          <li>div</li>
+          <li>footer</li>
+          <li>header</li>
+          <li>li</li>
+          <li>h1-h6</li>
+          <li>ol und ul</li>
+          <li>p tag</li>
+        </ul>
+
+        <!-- -Inline Element nutzt nur so viel Platz, wie der Content ist -->
+        <!-- Inline Elemente werden nebeneinander angezeigt -->
+        <h4>Beispiele für Inline Elemente</h4>
+        <p>Nutzen nur so viel Platz, wie der Content ist</p>
+        <ul>
+          <li>a tag</li>
+          <li>Button</li>
+          <li>image</li>
+          <li>input</li>
+          <li>label</li>
+          <li>textarea</li>
+          <li>span</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

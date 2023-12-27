@@ -1,0 +1,18 @@
+p {
+  border: 3px solid orange;
+}
+
+p::before {
+  content: "Info";
+  background-color: orange;
+}
+
+p::after {
+  content: "♥";
+  color: orange;
+}
+
+p::selection {
+  color: orange;
+  text-decoration: underline;
+}

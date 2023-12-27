@@ -1,0 +1,17 @@
+html {
+  background-color: lightblue;
+}
+
+nav {
+  background-color: rgb(174, 174, 174);
+  color: rgb(174, 174, 174);
+}
+
+a {
+  color: red;
+  font-weight: 700;
+}
+
+span {
+  color: red;
+}

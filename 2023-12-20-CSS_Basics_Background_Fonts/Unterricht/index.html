@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="CSS Background Font " />
+    <meta name="description" content="Hallo ich bin eine meta description" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h3>Wiederholung zu Listen und head und header</h3>
+      <ol>
+        <li>li steht für List item</li>
+      </ol>
+      <ul>
+        <li>ul - unordered list, ol - ordered list</li>
+        <li>
+          Unterschied zwischen header und head:
+          <ul>
+            <li>Die Sachen im head sieht man nicht - Meta Beschreibungen</li>
+            <li>Header wird "öffentlich" gestaltet</li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section>
+        <h1>Nicht semantische Elemente sind:</h1>
+        <ol>
+          <li>div - Element</li>
+          <!-- Span nicht alleine benutzen. Sollte in einem h1-h6 oder p etc benutzt werden! -->
+          <li>
+            span - Element
+            <ul>
+              <li>
+                wenn man in einem p tag ein einzelnes Wort farbig haben will
+              </li>
+              <li>optisch in html kein Unterschied</li>
+              <li>span darf nicht alleine rumstehen</li>
+            </ul>
+          </li>
+        </ol>
+        <!-- span makiert ein Wort oder kleine Area die man später mit CSS farbig gestalten kann -->
+        <p>
+          Lorem ipsum dolor, sit amet consectetur
+          <span>Hallo Leute </span>adipisicing elit. Modi possimus praesentium,
+          laborum obcaecati labore unde? Magni placeat ab perspiciatis nulla.
+        </p>
+      </section>
+
+      <section>
+        <h2>Block Elemente und Inline Elemente</h2>
+
+        <h4>Beispiele für Block elemente</h4>
+        <!-- -Block Element nimmt 100% breite der Seite ein -->
+        <!-- Werden immer untereinander aufgelistet -->
+        <ul>
+          <li>article</li>
+          <li>section</li>
+          <li>div</li>
+          <li>footer</li>
+          <li>header</li>
+          <li>li</li>
+          <li>h1-h6</li>
+          <li>ol und ul</li>
+          <li>p tag</li>
+        </ul>
+
+        <article>
+          <p>Hallo Welt</p>
+        </article>
+
+        <!-- -Inline Element nutzt nur so viel Platz, wie der Content ist -->
+        <!-- Inline Elemente werden nebeneinander angezeigt -->
+        <h4>Beispiele für Inline Elemente</h4>
+        <ul>
+          <li>a tag</li>
+          <li>Button</li>
+          <li>image</li>
+          <li>input</li>
+          <li>label</li>
+          <li>textarea</li>
+          <li>span</li>
+        </ul>
+      </section>
+
+      <article>
+        <a href="#">Ich bin ein Link</a>
+        <a href="#">Noch ein a tag</a>
+        <button>Hallo</button>
+      </article>
+
+      <section>
+        <h2>Drei Möglichkeiten CSS im HTML einzubinden</h2>
+        <ol>
+          <!-- Best practise ist extern -->
+          <li>
+            Extern ♥
+            <ul>
+              <!--  <link rel="stylesheet" href="./style.css" /> -->
+              <li>
+                In den "Head" kommt der link mit dem Pfad zur CSS Datei ein
+              </li>
+            </ul>
+          </li>
+          <li>
+            Intern
+            <ul>
+              <!-- style tag mit css drin, wollen wir nicht, damit man beide codes getrennt macht
+                 -->
+              <li>Im head befindet sich ein style tag</li>
+            </ul>
+          </li>
+          <li>
+            Inline Styling
+            <ul>
+              <h3 style="background-color: blue">Einfach in der Zeile style</h3>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Fonts einbinden</h2>
+        <ol>
+          <!-- nicht extern nutzen, kann geld kosten -->
+          <li>extern</li>
+          <li>intern (runtergeladen/lokal)</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <article>
+        <!-- <img src="./assets/img/Cute-Cat-icon.png" alt="Cat" /> -->
+      </article>
+      <h2>Ich bin eine andere Font Family</h2>
+      <h4>Beispiele für textarea, button, input und label</h4>
+      <!-- Buttons werden nur bentutzt, wenn man eine JS funktion lostreten will, ansonsten werden a-tags genutzt -->
+      <button>Hallo</button>
+      <!-- Passwörter, Numbers etc.  -->
+      <input placeholder="Halloo" type="password" name="" id="" />
+      <!-- Steht über ein Inputfeld um es zu beschriften -->
+      <label for="Hallo">Hallo Welt</label>
+      <!-- größeres inputfeld -->
+      <textarea name="Hallo" id="" cols="30" rows="10"></textarea>
+    </footer>
+  </body>
+</html>

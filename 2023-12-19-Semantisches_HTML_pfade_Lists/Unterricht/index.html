@@ -1,0 +1,128 @@
+<!--  doctype ab hier fängt das html für den Browser an -->
+<!DOCTYPE html>
+<!-- Hier sagen wir dass wir eine deutschsprachige Seite haben-->
+<html lang="de">
+  <!-- Alle Meta informationen, wie Titel der Seite, Beschreibung der Seite -->
+  <head>
+    <!-- Hier steht das wir UTF-8 als Format benutzen -->
+    <meta charset="UTF-8" />
+    <!-- Die Seite soll immer die ganze Breite einnehmen-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Titel der Seite-->
+    <title>Hallo Kurs</title>
+    <!-- Verschiedene Farben von Kommentaren: -->
+    <!-- !Blau -->
+    <!-- *Orange -->
+    <!-- :grün -->
+    <!-- #rot -->
+    <!-- -pink -->
+  </head>
+  <body>
+    <header>
+      <nav>Ich bin eine Navigationsleiste</nav>
+      <a href="./summary.html"> Ich bin ein a Tag für Links</a>
+      <a href="#"> Home</a>
+      <!-- Das sind dynamische Pfade -->
+      <a href="./about/about2/about.html"> About</a>
+      <a href="./kontakt.html"> Kontakt</a>
+      <!-- Das ist ein absoluter Pfad-->
+      <!-- target="_blank" macht die Seite mit einem neuen Tab auf-->
+      <a href="https://www.super-code.de/" target="_blank"> SuperCode Page</a>
+    </header>
+
+    <!-- In den Main Tag kommt der Hauptcontent rein -->
+    <main>
+      <section>
+        <!-- h1 kommt in der Regel nur einmal! auf einer Website vor - 
+            liegt an der Google search engine -->
+
+        <article>
+          <!-- Überschriften werden nach Wichtigkeit ausgewählt, nicht nach Größe -->
+          <!-- Je niedriger die Zahl, desto wichtiger die Überschrift -->
+          <h2>Hier sind die Überschriften</h2>
+          <h1>h1</h1>
+          <h2>h2</h2>
+          <h3>h3</h3>
+          <h4>h4</h4>
+          <h5>h5</h5>
+          <h6>h6</h6>
+        </article>
+      </section>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+          suscipit necessitatibus repudiandae rerum consectetur reprehenderit,
+          quo inventore, vel deleniti eius itaque nesciunt explicabo accusantium
+          deserunt! Quas architecto enim sapiente modi.
+        </p>
+        <p>Lorem, ipsum dolor.</p>
+      </section>
+
+      <section>
+        <h2>Images</h2>
+        <!-- So benutzen wir Fotos/Bilder, alt steht für Alternativer text, für Sehbehinderte - Screenreader lesen das vor -->
+        <!-- absoluter Pfad: -->
+        <img
+          src="http://127.0.0.1:64620/19.12.-Semantisches_HTML_pfade_Lists/assets/images/Cute-Cat-icon.png"
+          alt="Cat"
+        />
+
+        <!-- dynamischer Pfad -->
+        <img src="./assets/images/Cute-Cat-icon.png" alt="Cat" />
+      </section>
+
+      <section>
+        <!-- *Listen -->
+        <h2>Hier fangen Listen an</h2>
+        <!-- -ol => ordet list - hier bekommen wir 1. 2. 3. 4. -->
+        <ol>
+          <!-- Copy Paste nach unten: ALT(pgdn)+Shift+Pfeil nach unten -->
+          <li>Eins</li>
+          <li>Zwei</li>
+          <li>Drei</li>
+        </ol>
+        <!-- -ul => unordet list - hier bekommen wir einfach nur Punkt vor der Liste-->
+        <ul>
+          <li>Eins</li>
+          <li>Eins</li>
+          <li>Eins</li>
+        </ul>
+
+        <!-- -Kombi aus beiden Listen: -->
+        <ul>
+          <li>ein li in ul</li>
+          <li>ein li in ul</li>
+          <li>ein li in ul</li>
+          <ul>
+            <li>Nochmal ein im UL was im UL ist</li>
+            <li>Nochmal ein im UL was im UL ist</li>
+            <ol>
+              <li>Hier mal ne OL</li>
+              <li>Hier mal ne OL</li>
+              <li>Einkaufen:</li>
+              <ol>
+                <li>Milch</li>
+                <li>Eier</li>
+              </ol>
+            </ol>
+          </ul>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <h4>Apple Footer</h4>
+      <ul>
+        <li>
+          <a href="#">Iphone</a>
+        </li>
+        <li>
+          <a href="#">Macbook</a>
+        </li>
+        <li>
+          <a href="#">Airpods</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

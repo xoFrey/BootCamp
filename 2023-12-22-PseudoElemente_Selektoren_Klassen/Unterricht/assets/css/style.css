@@ -1,0 +1,131 @@
+/* Nimmt sich jedes Element im html Code und wendet den Befehl darauf an */
+/* Kommt immer nach ganz oben */
+/* Margin auf 0 weil jedes HTML Element ein Margin schon drin hat */
+
+/* border: 1px solid blue;  - Um zu sehen was passiert*/
+/* In der Regel folgende Einstellungen: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mit dem first-letter kann man den ersten Buchstaben im p-tag stylen */
+section p::first-letter {
+  font-size: 40px;
+  background-color: rgb(161, 161, 161);
+  /* Erster Buchstabe wird immer großgeschrieben */
+  text-transform: uppercase;
+}
+
+/* mit der first-line kann man die erste Zeile stylen. Dynamisch, je nach Fenstergrößed */
+section p::first-line {
+  background-color: rgb(194, 255, 255);
+  font-size: 20px;
+}
+
+/* Wir können das auch kombinieren
+ */
+section p:last-of-type::first-line {
+  background-color: rgb(255, 202, 202);
+}
+
+/* Man kann die Bulletpoints mit Symbolen ersetzen mit ::marker - Befehl explizit für Listen*/
+/* "::before ::after ::marker makieren (zeigen) Pseudo Elemente - Sachen die man nicht makieren kann, kein richtiges HTML sondern einfach Pseudoelemente. Werden von Margin nicht beachtet und man kann sie auch im Code nicht makieren"  */
+article li::marker {
+  content: "♥ - ";
+  color: rgb(255, 116, 116);
+}
+
+/* Um die Bulletpoints verschwinden zu lassen: */
+/* article li {
+    list-style: none;
+} */
+
+/* Makierung wird gestyled - wenn man im HTML code was makiert sieht man die Farben die hier angegeben wurden */
+/* Kann man auch mit p::selection anwenden, wird dann aber nur bei p-tags funktionieren, nicht bei Überschriften */
+*::selection {
+  background-color: rgb(0, 17, 255);
+  color: rgb(243, 24, 255);
+}
+
+/* "- Ich bin After" - reine CSS, ist kein HTML Element, demnach kann man es nicht makieren*/
+/* Kleine Dekorative Elemente werden mit After gemacht - man kann ihn ganz normal stylen */
+/* Wenn der Content für Google und generell nicht wichtig ist
+ */
+/* After: können wir so benutzen: WICHTIG! Das After wird nicht im HTML Auftauchen */
+/* Before und After werden vom Margin berücksichtigt */
+article h4:nth-of-type(1)::after {
+  content: "♥ - Ich bin After";
+  font-size: 40px;
+  color: rgb(152, 152, 255);
+}
+/* Gleiches Ding nur mit before */
+article h4:nth-of-type(2)::before {
+  content: "Ich bin Before - ♥";
+  font-size: 40px;
+  color: rgb(248, 152, 255);
+}
+
+/* Action passiert beim hovern */
+article h4:nth-of-type(2):hover {
+  background-color: rgb(164, 164, 255);
+}
+
+/* Action passiert beim Klicken */
+article h4:nth-of-type(1):active {
+  background-color: rgb(255, 203, 203);
+}
+
+.button {
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+.button:active {
+  background-color: rgb(148, 148, 148);
+}
+
+/* # Class and IDs */
+/* Ansprechen von Klassen: mit einem Punkt davor */
+/* Klassennamen Sinnvoll benennen */
+/* Klassennamen mit mehreren Wörtern immer mit - Ich-bin-eine-klasse */
+/* nicht jedes Element eine Klasse geben, nur wo es Sinn macht */
+/* Erst übergeordneten Elementen eine Klasse geben und sonst nur wenn man zu viele Selektoren schreiben muss */
+/* Klassen fangen niemals mit Zahlen an */
+/* Kurze Namen für Klassen, kleine buchstaben */
+/* Klassennamen nach Content */
+/* Klassen nie an header footer oder main vergeben - man hat sie nur einmal */
+.button {
+  font-size: 30px;
+}
+
+.ich-bin-eine-klasse article h4 {
+  background-color: aqua;
+}
+
+.hallo {
+  background-color: bisque;
+}
+
+/* # Class vs. ID */
+/* IDs werden kaum mehr benutzt */
+/* IDs funktioneren 1 zu 1 wie klassen,  IDs werden mit # angesprochen */
+/* ID gewinnt immer gegen eine Klasse - Mächtigkeit ist Stärker => Selector Specification (when hovering over)*/
+/* wir wollen trotzdem immer Klassen benutzen */
+
+.class-bsp {
+  background-color: rgb(161, 161, 255);
+}
+
+#id-bsp {
+  background-color: rgb(255, 194, 194);
+}

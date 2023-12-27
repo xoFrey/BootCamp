@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../../../../0assets/fonts/Montserrat/Montserrat-Medium.ttf);
+}
+
+* {
+  font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+h3::first-letter {
+  font-size: 50px;
+  color: #483d8b;
+}
+
+h3:hover:first-letter {
+  color: #a020f0;
+}
+
+ul li:nth-of-type(1):first-letter {
+  font-size: 30px;
+  color: aqua;
+  text-decoration: overline;
+}
+
+ul li:nth-of-type(2):first-letter {
+  font-size: 30px;
+  color: rgb(251, 55, 55);
+  text-decoration: underline;
+}
+
+ul li:nth-of-type(3):first-letter {
+  font-size: 30px;
+  color: rgb(21, 187, 57);
+  text-decoration: line-through;
+}
+ul li:nth-of-type(3) {
+  text-decoration: line-through;
+}
+
+/* # In Klassen??? */
+
+section p:nth-of-type(1) {
+  color: rgb(98, 100, 137);
+  text-indent: 50px;
+}
+
+section p:nth-of-type(1)::first-line {
+  font-size: 20px;
+}
+
+section p:nth-of-type(2)::first-line {
+  color: green;
+}
+
+section p:nth-of-type(3)::first-line {
+  color: green;
+}
+
+section p:nth-of-type(4)::first-line {
+  color: green;
+}
+
+section p:nth-of-type(5)::first-line {
+  color: green;
+}
+section p:nth-of-type(6)::first-line {
+  color: green;
+}
+
+section p:nth-of-type(2):hover:first-line {
+  color: rgb(68, 82, 150);
+}
+
+section p:nth-of-type(3):hover:first-line {
+  color: rgb(68, 82, 150);
+}
+
+section p:nth-of-type(4):hover:first-line {
+  color: rgb(68, 82, 150);
+}
+
+section p:nth-of-type(5):hover:first-line {
+  color: rgb(68, 82, 150);
+}
+section p:nth-of-type(6):hover:first-line {
+  color: rgb(68, 82, 150);
+}
+section p:nth-of-type(2)::first-letter {
+  color: red;
+  font-size: 30px;
+}
+
+section p:nth-of-type(3)::first-letter {
+  color: red;
+  font-size: 30px;
+}
+
+section p:nth-of-type(4)::first-letter {
+  color: red;
+  font-size: 30px;
+}
+
+section p:nth-of-type(5)::first-letter {
+  color: red;
+  font-size: 30px;
+}
+section p:nth-of-type(6)::first-letter {
+  color: red;
+  font-size: 30px;
+}
+
+section p:nth-of-type(3) {
+  font-size: 10px;
+}
+section p:nth-of-type(5) {
+  font-size: 10px;
+}

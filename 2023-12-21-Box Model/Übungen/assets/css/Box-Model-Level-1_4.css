@@ -1,0 +1,37 @@
+div {
+  width: 150px;
+  height: 150px;
+  margin: 50px;
+  background-color: #9bc1bc;
+  border: solid 20px #f4f1bb;
+  box-shadow: 0px 0px 0px 25px#ED6A5A;
+  outline: solid 10px #546a7b;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li:nth-of-type(1):before {
+  content: "\25b6";
+  color: #9bc1bc;
+  margin-right: 3px;
+}
+
+ul li:nth-of-type(2):before {
+  content: "\25b6";
+  color: #f4f1bb;
+  margin-right: 3px;
+}
+
+ul li:nth-of-type(3):before {
+  content: "\25b6";
+  color: #546a7b;
+  margin-right: 3px;
+}
+
+ul li:nth-of-type(4):before {
+  content: "\25b6";
+  color: #ed6a5a;
+  margin-right: 3px;
+}

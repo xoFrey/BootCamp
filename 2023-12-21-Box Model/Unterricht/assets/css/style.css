@@ -1,0 +1,72 @@
+/* Stern bedeutet: Alle Elemente im HTML code werden angesprochen */
+/* Generelles Styling ganz nach oben (nur fonts werden drüber gepackt) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li:first-of-type h5 {
+  color: blueviolet;
+}
+li:nth-of-type(2) h5 {
+  color: green;
+}
+li:nth-of-type(3) h5 {
+  color: orange;
+}
+
+main section:nth-last-of-type(1) {
+  background-color: bisque;
+  width: 100px;
+  height: 200px;
+}
+
+main section div {
+  width: 100px;
+  /* Grenze bei border druchgänig: solid */
+  border: solid black;
+  /* Box wird auf eine Weite des Borders gescaled */
+  box-sizing: border-box;
+  /*Box ist so breit wie der Content: */
+  /* box-sizing: content-box; */
+}
+
+footer div {
+  background-color: rgb(243, 199, 199);
+  width: 200px;
+  height: 200px;
+  border: solid black 10px;
+}
+
+footer div:nth-of-type(1) {
+  /* y-Wert, x-Wert */
+  /* margin: 20px 40px; */
+  /* auf horizontaler ebene kann man mit auto den Abstand zentrieren */
+  margin: auto;
+  /* verschiedene Schreibweisen bei Margin: */
+  /* margin: 10px; - auf allen seiten 10px 
+  margin: 10px 20px; - y, x - Werte
+  magin: 10px 10px 20px 20px - oben rechts unten links -> Kurzschreibweise für top, right, bottom, left
+  margin-top
+  margin-right
+  margin-bottom
+  margin-left
+  */
+  /* gleiches gilt für padding */
+}
+
+footer div:nth-of-type(2) {
+  padding: 20px 40px;
+}
+
+footer section p {
+  background-color: aquamarine;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  display: inline-block;
+  /* display:block;
+  display:inline; */
+  /* display:none; - blendet den content aus, beim hovern kann man es einblenden */
+}
