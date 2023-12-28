@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../../../../0assets/fonts/Poppins/Poppins-Medium.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+header {
+  background: url(../../../../0assets/img/parth-savani-uCuZ9kscyuc-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+section {
+  color: white;
+  font-family: Poppins;
+  font-size: 10rem;
+  position: absolute;
+  right: 400px;
+  top: 250px;
+}
+
+p:nth-of-type(1) {
+  text-transform: uppercase;
+}
+
+p:nth-of-type(2) {
+  font-size: 3rem;
+  text-align: right;
+}
