@@ -1,0 +1,35 @@
+html {
+  font-size: 62.5%;
+}
+/* except vh, none of the sizes change when the window is being squished from top to bottom */
+/* Pixel is a fixed size, it doesnt move with display size */
+.pixel {
+  height: 200px;
+  width: 200px;
+}
+
+/* behaves similar like vw, changes according to display size, gets smaller and bigger */
+.percent {
+  width: 20%;
+}
+
+/* like pixel, doesnt move in size */
+.em {
+  width: 10em;
+  height: 10em;
+}
+/* behaves like em and pixel, is static not dynamic */
+.rem {
+  width: 20rem;
+  height: 20rem;
+}
+/* dynamic size changes with the display size */
+.vw {
+  width: 20vw;
+  height: 20vw;
+}
+/* only changes size, when you change the height of the window  */
+.vh {
+  width: 20vh;
+  height: 20vh;
+}
