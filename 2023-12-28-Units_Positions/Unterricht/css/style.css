@@ -1,0 +1,139 @@
+/* # Units */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mit der Formel sind 4rem = 40px */
+/* rem = root-em */
+/* html tag ist mein root Element und REM bezieht sich darauf */
+html {
+  /* Benötigt man damit man mit REM nicht rechnen muss. So kann ich zb eine h1 nur einfach auf 1.5rem stellen = 15px */
+  font-size: 62.5%;
+}
+
+/* * REM */
+/* * 1rem = 16px */
+/* * REM - unabhängig vom elternelement */
+/* * REM ist moderner und öfter benutzt als em */
+/* barrierefreiheit freundlich */
+h2 {
+  font-size: 1.5rem;
+}
+
+/* *EM */
+/* * EM ist abhängig vom Elternelement */
+/* * rem und em kann man mixen, macht aber keinen Sinn */
+/* * EM nicht wirklich benutzen, REM besser */
+
+h1 {
+  font-size: 3m;
+}
+
+/* * vw and vh - viewwidth and viewheight */
+/* responsive Größeneinstellung */
+/* * 100vh nimmt immer die komplette höhe ein, wie die höhe vom Display ist, unabhängig von Displaysize */
+
+.bisque {
+  background-color: bisque;
+  /* 100% der height der Seite - hier 50%  */
+  height: 100vh;
+  width: 50vw;
+}
+
+/* % geht nur auf die width und nicht auf die height */
+/* Prozent ist nicht wirklich akkurat wie bei vw */
+/* Prozent berechnet den scrollbalken mit ein, während vw das ganze Fenster berücksichtigt */
+.blue {
+  background-color: aquamarine;
+  width: 50%;
+  height: 100%;
+}
+
+/* * Clamp ist vom Responsiven das Beste! */
+/* h3 wird dynamisch verändert mit der Size des Displays --> clamp(Minimal Wert, Idealwert , Maximal Wert) */
+/* In der Mitte immer vw, Minimal und Maximalwert können fix sein (rem, px) */
+/* Nicht die optimalste Methode wenn man mit dem Designer arbeitet und er eine bestimmte Größe möchte */
+
+h3 {
+  font-size: clamp(1rem, 1.8vw, 2rem);
+}
+
+
+/* Pixel absoluter Wert. vw dynamischer Wert */
+
+
+
+/* # Position */
+/* Static - Default position */
+/* Fixed - Egal wie man scrollt es bleibt da */
+/* Absolut - Kindelement von Relative*/
+/* Relative - Elternelement von Absolut*/
+
+img {
+  /* ist immer nur so groß wie 100% des aktuellen screens */
+  /* Bild Max so breit wie chrome */
+  max-width: 100%;
+}
+
+.absolut {
+  margin: 30px;
+  padding: 10px;
+  background-color: rgb(255, 173, 192);
+  /* Damit setzen wir .absolut als Elternelement. Absolut richtet sich nach diesem Elternelement */
+  position: relative;
+}
+/* img ist das Kind element */
+.absolut img {
+  height: 20px;
+  width: 20px;
+  /* KindElement bekommt immer absolut */
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  /* bottom, left */
+  box-shadow: 0 0 10px 1px black;
+}
+
+/* Position nur für kleine Änderungen. NIE für Boxen!!!! */
+/* Static is default */
+
+/* bei mehreren Bildern mit Klassen arbeiten */
+
+/* *Fixed */
+.fixed img {
+  background-color: rgb(255, 199, 219);
+  box-shadow: 2px 2px 5px 0px black;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.fixed img:hover {
+  opacity: 1;
+}
+
+/* *Sticky */
+/* wird oft beim header benutzt */
+
+header a {
+  padding: 5px 10px;
+}
+header nav {
+  background-color: rgb(178, 178, 255);
+}
+
+header {
+  position: sticky;
+  top: 0px;
+}
+
+nav {
+  margin-top: 30px;
+}
