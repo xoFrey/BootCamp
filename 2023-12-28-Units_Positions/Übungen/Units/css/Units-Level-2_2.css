@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background: url(../../../../0assets/img/coding.avif) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  padding: 150px;
+}
+/* 
+article {
+  margin: 150px auto;
+} */
+article p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 4vw;
+  text-align: center;
+  color: white;
+  background-color: rgba(134, 134, 134, 0.718);
+  padding: 30px 30px 0 30px;
+}
+
+article p:nth-of-type(2) {
+  padding-bottom: 30px;
+  padding-top: 0;
+}
