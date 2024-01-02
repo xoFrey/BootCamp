@@ -1,0 +1,148 @@
+img {
+  max-width: 100%;
+}
+.basic img {
+  width: 190px;
+  transition: 0.5s;
+  /* box-shadow: 5px 10px 20px 0px black; */
+}
+
+.basic img:hover {
+  width: 200px;
+  transition: 0.5s;
+  box-shadow: 5px 10px 20px 0px black;
+}
+
+.basic div {
+  background-color: bisque;
+  transition: 0.5s;
+}
+
+.basic div:hover {
+  transition: 0.5s;
+  box-shadow: 5px 10px 20px 0px black;
+}
+/* :Flex Basics!!!  */
+.basic {
+  /* Stellt Elemente nebeneinander - flexbox extrem responsive  */
+  display: flex;
+  /* zentriert die Box in die Mitte neben dem Element, die nicht in der Section ist  */
+  align-items: center;
+
+  /* Abstand zwischen den beiden Elementen div und img */
+  /* gap - meist dynamische werte Nutzen, damit der Abstand responsive bleibt */
+  /* gap wird in der Regel benutzt, generiet den Abstand */
+  /* gap: 5vw; */
+  /* row-gap macht den Abstand von oben nach unten */
+  row-gap: 50px;
+  /* column-gap macht den Abstand von links nach rechts */
+  column-gap: 50px;
+}
+
+/* *WICHTIG!!!! */
+/* Elternelement bekommt Display:flex!! Nicht das Element was ich damit ansprechen möchte */
+
+.box {
+  background-color: #999999;
+  height: 70vh;
+
+  /* So geben wir ein Element flex */
+  display: flex;
+  /* :Definiert die x-Achse */
+  /* flex-start - default (links) */
+  /* flex-end - rechts */
+  /* # google: can i use right instead of flex-end */
+  justify-content: flex-start;
+  /* :Definiert die y-Achse */
+  /* ähnliche Befehle wie bei justify-content */
+  align-items: flex-end;
+}
+
+.box div {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(255 156 158);
+  /* wenn man die Box genauer steuern möchte, setzt man ein Margin im Kind-Element */
+  /* margin-left: 20px; */
+}
+
+/* :Flex Direction  */
+
+.direction {
+  background-color: bisque;
+  height: 50vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  gap: 10px;
+  /* Column - oben nach unten */
+  /* Column reverse - von unten nach oben */
+  /* row - rechts nach links (default) */
+  /*row reverse - links nach rechts   */
+  /* Reverse macht man sehr selten, da man das im html machen kann */
+  flex-direction: column-reverse;
+}
+
+.direction div {
+  background-color: blue;
+  color: white;
+  height: 100px;
+  width: 100px;
+
+  /* *Flex im flex verschachtelt um den Text center zu haben */
+  /* einfach Kind1 Element auch Flexbox geben dann wird es zum Elternelement für die Kind2 elemente */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* einfach Klasse center machen, um allen Elementen zb hier in Center zu packen - ersetzt auch margin:auto */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* *header!!!! */
+/* space-between */
+header {
+  display: flex;
+  align-items: center;
+  /* space-between - maximal voneinander entfernt (beide elemente) -> Wrapper und h1 */
+  /* Abstand von links nach rechts  */
+  justify-content: space-between;
+
+  /* space-around: abstand links und rechts aber der in der Mitte ist immer am größten - braucht man nicht häufig */
+
+  /* space-evenly - macht die Abstände immer um jedes Element gleich groß. (auch in der Mitte)  */
+}
+
+header nav {
+  background-color: lightcoral;
+  /* Flex in einer Flex damit die a-tags gap haben */
+  display: flex;
+  gap: 3vw;
+}
+
+header h1 {
+  background-color: lightcoral;
+}
+
+/* *Flex Wrap!!!! */
+
+.wrap {
+  background-color: rgb(165, 165, 255);
+  display: flex;
+  gap: 5px;
+
+  /* wenn die boxen nicht schrumpfen sollen, sondern einfach umbrechen sollen (auf die nächste zeile) */
+  /* Boxen bleiben immer 120px */
+  /* nowrap - default  */
+  flex-wrap: wrap;
+}
+
+.wrap div {
+  background-color: rgb(254, 183, 255);
+  width: 120px;
+}
