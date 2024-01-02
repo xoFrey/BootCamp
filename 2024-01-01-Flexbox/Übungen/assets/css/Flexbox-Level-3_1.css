@@ -1,0 +1,108 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: Raleway Light;
+  src: url(../fonts/Raleway-Light.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+
+.navbar {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.navbar a,
+nav {
+  padding: 10px;
+  text-decoration: none;
+  color: #666;
+}
+
+.navbar nav a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.navbar a {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.navbar nav a:hover {
+  color: #8ca7bc;
+}
+
+.navbar a:hover {
+  color: #8ca7bc;
+}
+
+/* - Article  */
+
+article {
+  background: url(../img/water.jpg) no-repeat center;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+article h1 {
+  font-family: Raleway Light;
+  font-size: 60px;
+  margin-bottom: 25px;
+}
+
+article p {
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+
+article div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+article a {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+article a:nth-of-type(1) {
+  border: 2px solid #745cf9;
+  background-color: #745cf9;
+}
+article a:nth-of-type(2) {
+  border: 2px solid #ffffff;
+}
+
+article a:nth-of-type(1):hover {
+  border: 2px solid #4433a4;
+  background-color: #4433a4;
+}
+article a:nth-of-type(2):hover {
+  border: 2px solid #ffffff;
+  background-color: white;
+  color: black;
+}
