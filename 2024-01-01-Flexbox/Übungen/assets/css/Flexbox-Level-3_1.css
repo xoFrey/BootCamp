@@ -20,16 +20,19 @@
   justify-content: center;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .navbar a,
 nav {
-  padding: 10px;
   text-decoration: none;
   color: #666;
 }
-
+/* #Warum geht hier kein space-around/evenly etc sondern nur gap */
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
 .navbar nav a {
   font-size: 13px;
   font-weight: 500;
