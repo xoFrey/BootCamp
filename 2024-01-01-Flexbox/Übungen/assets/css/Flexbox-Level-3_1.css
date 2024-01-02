@@ -20,7 +20,7 @@
   justify-content: center;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .navbar a,
@@ -28,19 +28,18 @@ nav {
   text-decoration: none;
   color: #666;
 }
-/* #Warum geht hier kein space-around/evenly etc sondern nur gap */
 .navbar nav {
   display: flex;
-  gap: 30px;
+  gap: 1.25rem;
 }
 .navbar nav a {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
 }
 
 .navbar a {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
@@ -67,27 +66,27 @@ article {
 
 article h1 {
   font-family: Raleway Light;
-  font-size: 60px;
-  margin-bottom: 25px;
+  font-size: 3.75rem;
+  margin-bottom: 1.5625rem;
 }
 
 article p {
-  font-size: 14px;
-  margin-bottom: 36px;
+  font-size: 0.875rem;
+  margin-bottom: 2.25rem;
 }
 
 article div {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 article a {
   text-decoration: none;
   color: white;
-  padding: 15px;
-  width: 200px;
+  padding: 0.9375rem;
+  width: 12.5rem;
   display: flex;
   justify-content: center;
 }
