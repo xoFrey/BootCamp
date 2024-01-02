@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato;
+}
+
+/* Styling h1 */
+h1 {
+  font-size: 2.4rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+h1::before {
+  content: url(../../assets/img/logo.png);
+}
+
+/* styling navbar */
+
+.navbar {
+  display: flex;
+  gap: 3.2rem;
+  align-items: flex-end;
+  padding: 1.5rem 6.4rem;
+}
+
+.links {
+  width: 100vw;
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: space-between;
+}
+.test {
+  /* display: flex;
+  gap: 1.7rem; */
+  display: flex;
+  justify-content: space-evenly;
+}
