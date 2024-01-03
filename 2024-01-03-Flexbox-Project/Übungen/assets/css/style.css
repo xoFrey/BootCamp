@@ -1,0 +1,279 @@
+@font-face {
+  font-family: Clicker;
+  src: url(../fonts/Clicker_Script/ClickerScript-Regular.ttf);
+}
+
+@font-face {
+  font-family: Playfair;
+  src: url(../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Playfair;
+  font-size: 62.5%;
+}
+
+header {
+  background: url(../img/coffeimg.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+/* !root */
+
+:root {
+  --maincolor: white;
+  --btncolor: #1e1e1e;
+  --btnbg: #f9c06a;
+  --coffeecolor: #603809;
+  --coffetextcolor: #707070;
+}
+
+/* ! Nav Bar */
+/* Nav general */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 2.1rem;
+}
+
+/* bean scene */
+nav div:nth-of-type(1) a {
+  color: var(--maincolor);
+  text-decoration: none;
+  font-family: Clicker;
+  font-size: 3.5rem;
+}
+
+/* links */
+nav div:nth-of-type(2) {
+  display: flex;
+  gap: 6rem;
+}
+nav div:nth-of-type(2) a {
+  color: var(--maincolor);
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+/* Sign in up */
+nav div:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  gap: 6.2rem;
+}
+
+nav div:nth-of-type(3) a:first-child {
+  color: var(--maincolor);
+  text-decoration: none;
+  font-size: 1.4rem;
+  /* text-decoration: underline; */
+}
+
+/* !Class Button */
+
+.button {
+  color: var(--btncolor);
+  background-color: var(--btnbg);
+  padding: 1.2rem 2.3rem;
+  text-align: center;
+  border-radius: 2.4rem;
+  box-shadow: 0px 0.6rem 1.2rem 0px rgba(249, 192, 106, 0.22);
+  width: 100px;
+  height: 48px;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.bigbtn {
+  width: 134px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  display: inline-block;
+}
+
+/* !Header article */
+
+header article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 18.3rem 9.3rem;
+}
+
+article p:nth-of-type(1) {
+  font-size: 2.2rem;
+}
+
+article p:nth-of-type(2) {
+  font-size: 2rem;
+  width: 53rem;
+  height: 10rem;
+  line-height: 3.4rem;
+  margin-bottom: 3.4rem;
+}
+
+h1 {
+  font-family: Clicker;
+  font-size: 22rem;
+  font-weight: lighter;
+}
+
+/* !Main Style */
+
+/* *Section - Discover */
+
+.discover {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50vh;
+}
+
+.discover article {
+  display: flex;
+  flex-direction: column;
+  gap: 2.9rem;
+  margin-left: 7.9rem;
+}
+
+.discover article h2 {
+  font-size: 5.4rem;
+  color: var(--coffeecolor);
+  font-weight: 700;
+}
+
+.discover article p {
+  color: var(--coffetextcolor);
+  font-size: 2rem;
+  line-height: 3.4rem;
+  width: 58.8rem;
+}
+
+/* image between sections */
+
+.splash {
+  width: 36.6rem;
+  height: 20rem;
+  transform: scaleY(-1);
+}
+
+/* Section different */
+
+.different {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.different div h3 {
+  font-size: 5.4rem;
+  color: var(--coffeecolor);
+  margin-bottom: 1.6rem;
+}
+
+.different div p {
+  font-size: 2rem;
+  color: var(--coffetextcolor);
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+/* article fourbox */
+
+.fourbox {
+  display: flex;
+  margin-bottom: 3.2rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28rem;
+  height: 28.4rem;
+  padding: 3rem;
+}
+
+.one {
+  background-color: #ffeed8;
+}
+.two {
+  background-color: #fff9f1;
+  border: 1px solid rgba(249, 192, 106, 0.42);
+}
+
+.icon {
+  width: 8.8rem;
+  height: 8.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.head4 {
+  font-size: 2.8rem;
+  color: var(--coffeecolor);
+  margin-bottom: 0.8rem;
+}
+
+.join p:nth-of-type(1) {
+  margin: 0;
+}
+
+.join p:nth-of-type(2) {
+  color: var(--coffeecolor);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.join {
+  text-align: center;
+  margin-bottom: 3.7rem;
+}
+
+/* Section to go cup */
+
+.togo {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to top, #603709bf, #603709bf),
+    url(../img/coffeewithbeans.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 5.4rem;
+  padding-bottom: 5.4rem;
+}
+
+.ordering {
+  display: flex;
+  flex-direction: column;
+}
+
+.ordering h5 {
+  font-size: 5.4rem;
+  color: var(--maincolor);
+  font-weight: 700;
+  width: 57.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.ordering p {
+  font-size: 2rem;
+  color: var(--maincolor);
+  line-height: 3.4rem;
+  width: 40.9rem;
+  margin-bottom: 2.2rem;
+}
+
+.togo img {
+  width: 30rem;
+  height: 46.7rem;
+  margin-bottom: 5.3rem;
+}
