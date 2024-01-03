@@ -67,4 +67,5 @@
 .align article:nth-of-type(4) {
   background-color: rgb(232, 101, 101);
   align-self: flex-end;
+  color: rgb(213, 62, 62);
 }
