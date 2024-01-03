@@ -1,0 +1,70 @@
+/* *Order!! */
+/* Für Order benötigt das Elternelement display flex */
+.order {
+  background-color: gray;
+  display: flex;
+  gap: 5px;
+}
+
+.order article {
+  background-color: rgb(244, 195, 195);
+  height: 20px;
+  width: 20px;
+}
+/* Order fängt immer mit index 0 an (wie array) */
+/* Kann man für Reihenfolge von Elementen nutzen */
+/* Jedes Kind-Element braucht eine "order", damit das funktioniert  */
+.order article:nth-of-type(1) {
+  order: 1;
+}
+.order article:nth-of-type(2) {
+  order: 3;
+}
+.order article:nth-of-type(3) {
+  order: 0;
+}
+.order article:nth-of-type(4) {
+  order: 2;
+}
+
+/* * Align!! */
+
+.align article {
+  color: white;
+  height: 30px;
+  width: 30px;
+}
+
+.align {
+  height: 250px;
+  background-color: lightgoldenrodyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  /* Mit flex-direction column ändert sich die ganze achse - x und y achse dreht sich und spiegelt sich!  */
+  /* wenn man column nutzt ändert sich auch die ausrichtung von justify-content und align-items */
+  flex-direction: column;
+}
+
+/* align-self wird beim Kindelement genutzt,  funktioniert nur wenn Elternelement Display Flex hat */
+
+/* Mit align-self kann man die einzelnen elemente "steuern" */
+/* Ist nicht wie bei order, man muss nicht jedem Kind Element align-self geben damit es funktioniert  */
+.align article:nth-of-type(1) {
+  background-color: rgb(74, 177, 115);
+  align-self: flex-end;
+}
+.align article:nth-of-type(2) {
+  background-color: palevioletred;
+  align-self: flex-start;
+}
+.align article:nth-of-type(3) {
+  background-color: gray;
+  align-self: center;
+}
+.align article:nth-of-type(4) {
+  background-color: rgb(232, 101, 101);
+  align-self: flex-end;
+}
