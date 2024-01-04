@@ -18,13 +18,16 @@ form {
   display: flex;
   flex-direction: column;
   width: 21vw;
+  background-color: rgb(229, 229, 229);
+  padding: 10px;
 }
 
 p {
   background-color: #43d1af;
-  padding: 20px 150px;
+  padding: 20px 20px;
+  text-align: center;
   color: white;
-  margin-bottom: 10px;
+  width: 21vw;
 }
 
 input {
