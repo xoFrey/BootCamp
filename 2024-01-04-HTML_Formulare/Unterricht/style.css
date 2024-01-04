@@ -1,0 +1,18 @@
+label {
+  display: block;
+}
+
+input {
+  margin: 3px;
+  border: 1px solid rebeccapurple;
+}
+
+/* alles mit dem typ text wird gestyled */
+input[type="text"] {
+  height: 20px;
+  background-color: bisque;
+}
+
+textarea {
+  border-radius: 30px;
+}

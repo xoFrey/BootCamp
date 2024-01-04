@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <p>Welche Formulare gibt es?</p>
+    <!-- *Form -->
+    <!-- benutze ich an eine Ansammlung von input feldern als wrapper -->
+    <form>
+      <!-- * Text und label -->
+      <!-- Inputfelder sind inline elemente -->
+      <!-- Vorteil label: man kann label mit dem inputfeld verbinden -->
+      <!-- Man kann im HTML auf "Vorname" klicken und man kommt direkt auf das textfeld -->
+      <!-- Das for und die id sollen den selben namen tragen -->
+
+      <label for="vorname">Vorname:</label>
+      <!-- muss eine ID sein und keine Klasse -->
+      <input id="vorname" type="text" />
+      <br />
+
+      <!-- * Number -->
+      <label for="number">Number</label>
+      <input type="number" id="number" />
+      <br />
+      <!-- * Tel  -->
+      <!-- hier kann man auch Zeichen hinzufügen nicht so wie bei number -->
+      <!-- meistens macht man textfeld und dann die logik dahinter mit JS -->
+
+      <label for="telefon">Tel</label>
+      <input type="tel" id="telefon" />
+      <!-- Number und Tel nutzt man nicht ganz so häufig => JS  -->
+      <br />
+      <!-- * Email -->
+      <!-- nutzt man häufiger -->
+      <label for="email">Email</label>
+      <input type="email" id="email" />
+
+      <!-- *Radios -->
+      <!-- Wir brauchen value und name um nur eine radio anklicken zu können -->
+      <!-- nutzen wir, wenn user nur eine Option haben soll -->
+      <div>
+        <label for="">Was magst du am liebsten?</label>
+        <input type="radio" name="fav-lang" id="html" value="html" />
+        <label for="html">HTML</label
+        ><input type="radio" name="fav-lang" id="css" value="css" />
+        <label for="css">CSS</label>
+        <input type="radio" name="fav-lang" id="js" value="js" />
+        <label for="js">JS</label>
+      </div>
+      <br />
+
+      <!-- *Checkboxen -->
+      <!-- nutzen wir wenn der nutzer mehrere Optionen anklicken kann -->
+      <label for="check">Checkbox 1 </label>
+      <input type="checkbox" name="" id="check" />
+
+      <label for="check2">Checkbox 2</label>
+      <input type="checkbox" name="" id="check2" />
+      <label for="check3">Checkbox 3</label>
+      <input type="checkbox" name="" id="check3" />
+      <br />
+      <!-- * Date -->
+      <!-- braucht man sehr oft -->
+      <label for="date">Date</label>
+      <input type="date" name="" id="date" />
+      <br />
+      <!-- * Password -->
+      <!-- man kann type auf text ändern um password anzeigen zu lassen -->
+      <label for="password"> Password</label>
+      <input type="password" name="" id="password" />
+
+      <!-- * file -->
+      <label for="file">File</label>
+      <input type="file" name="" id="file" />
+
+      <!-- * range -->
+      <!-- man kann bei range min und max und steps eingeben, um den slider immer um einen zu verschieben -->
+      <!-- step: in wieviel schritten möchtest du springen in dem intervall min-max -->
+      <label for="range">Range</label>
+      <input type="range" name="" id="range" min="0" max="10" step="1" />
+
+      <!-- * button mit input -->
+      <!-- braucht man nicht, es gibt button für -->
+      <input type="button" value="Hallo" />
+
+      <br />
+      <!-- * Color -->
+      <!-- einfach colorpicker feld -->
+      <input type="color" name=" " id="" />
+      <br />
+      <!-- *textarea -->
+      <label for="textarea">Textarea</label>
+      <textarea id="textarea" cols="30" rows="10"></textarea>
+      <br />
+
+      <!-- *select and option -->
+      <!-- hier kann ich auch nur eins wählen - drop down -->
+      <!-- Same wie Radio - man braucht ein value -->
+      <label for="cars">Select:</label>
+      <select id="cars">
+        <option value="bmw">BMW</option>
+        <option value="tesla">Tesla</option>
+        <option value="audi">Audi</option>
+      </select>
+
+      <!-- * submit button -->
+      <!-- wird häufig genutzt -->
+      <!-- wenn man kein value eingibt, schreibt der "Senden" -->
+      <!-- "Senden" - kommt auf Computersprache an. Wenn PC auf english ist, wirds "send" or "submit" -->
+      <input type="submit" />
+      <!-- man kann aber auch den Buttonnamen ändern -->
+      <input type="submit" value="Go" />
+      <!-- mit Submit kann man die textfelder "löschen", bzw bei Email wird angezeigt wenn da kein @ zeichen ist zb. man kann auch Enter drücken ohne submit-->
+    </form>
+
+    <!-- *Placeholder -->
+    <!-- in der textbox steht der placeholder drin -->
+    <!-- Userexperience: Besser mit label -->
+    <label for="placeholder">Placeholder</label>
+    <input
+      type="text"
+      placeholder="Hier bitte eintragen"
+      name=""
+      id="placeholder"
+    />
+
+    <!-- * Disabled -->
+    <!-- Damit der user bei rechungen nicht neue sachen eintragen kann -->
+    <!-- Buttons kann man auch disablen -->
+    <!-- In combination with js  -->
+    <label for="disabled">Disabled</label>
+    <input type="text" id="disabled" disabled />
+
+    <!-- * required -->
+    <!-- Pflichtfeld immer mit stern makieren, für User-->
+    <!-- man kann required in der untersuchung löschen und so das pflichtfeld umgehen -->
+    <form action="">
+      <label for="required">Pflichtfeld*</label>
+      <input type="text" id="required" required />
+      <input type="submit" value="Gooo" />
+    </form>
+  </body>
+</html>
