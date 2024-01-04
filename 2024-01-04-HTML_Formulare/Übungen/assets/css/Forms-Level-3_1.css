@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.color {
+  margin: 0;
+  background-color: rgb(241, 241, 241);
+  width: 30vw;
+}
+
+/* !Div Headline styling */
+
+.headline {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #2a88ad;
+  color: white;
+  padding: 15px 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 30vw;
+}
+
+p {
+  font-size: 13px;
+}
+
+/* ! h2 styling */
+
+h2 {
+  color: #2a88ad;
+  font-size: 20px;
+}
+
+/* !Article */
+
+article {
+  margin-bottom: 10px;
+  width: 30vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  align-self: center;
+}
+
+label {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(149, 149, 149);
+  margin: 5px 0 5px 40px;
+}
+
+/* ! Number before headline */
+
+.number {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.number p {
+  background-color: #2a88ad;
+  height: 25px;
+  border-radius: 50%;
+  width: 25px;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  position: absolute;
+  left: -30px;
+}
+
+/* ! input text */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 25vw;
+  height: 3vh;
+  border-style: inset;
+  border-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding-right: 100px;
+}
+
+/* !checkbox */
+
+.sub {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.check {
+  display: flex;
+  align-items: center;
+}
+/* # Wie kann man label in der box behalten */
+.check label {
+  width: 10vw;
+  margin: 0 10px 30px 0;
+}
+
+.check input {
+  width: 2vw;
+  margin: 0 10px 30px 0;
+}
+
+/* !Submit and Confirmpw  */
+
+input[type="password"]:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+
+input[type="submit"] {
+  margin-left: 2vw;
+  width: 200px;
+  padding: 5px 20px;
+  background-color: #2a88ad;
+  color: white;
+  margin: 0 10px 30px 40px;
+}
