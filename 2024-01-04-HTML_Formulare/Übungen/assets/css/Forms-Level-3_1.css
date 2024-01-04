@@ -41,8 +41,10 @@ h2 {
 /* !Article */
 
 article {
-  margin-bottom: 10px;
+  padding: 0px 0 5px 0;
   width: 30vw;
+  height: 19vh;
+  background-color: rgb(255, 255, 255);
 }
 
 form {
