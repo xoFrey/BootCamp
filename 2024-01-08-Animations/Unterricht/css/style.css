@@ -119,7 +119,7 @@ section p {
 }
 
 h1 {
-  /* animation: scaleBig 2s linear infinite; */
+  animation: scaleBig 2s linear infinite;
 }
 
 .animation {
