@@ -4,35 +4,50 @@
   box-sizing: border-box;
 }
 
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(200, 200, 200);
+}
+
 img {
   width: 200px;
   height: 200px;
 }
-main {
+
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
-}
-.container {
-  display: inline-block;
-
   position: relative;
-
   overflow: hidden;
 }
 
 .discover {
-  background-color: rgba(128, 128, 128, 0.477);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  font-size: 20px;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(75, 75, 75, 0.477);
   position: absolute;
   width: 200px;
   height: 200px;
   top: 200px;
-  /* display: none; */
-  transition: 0.5s;
+  transition: 1s linear;
 }
 
+/* # Warum wird bei img immer hover neu aktiviert???  */
+/* # Wenn man oberen container anspricht passiert das nicht.  */
+
+/* img:hover .discover {
+  top: 0px;
+} */
+
 .container:hover .discover {
-  background-color: rgba(255, 0, 0, 0.398);
   top: 0px;
 }
