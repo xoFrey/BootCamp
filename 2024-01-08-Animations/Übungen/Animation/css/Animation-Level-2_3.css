@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+div {
+  background-color: green;
+}
+
+img {
+  width: 100px;
+  box-shadow: -10px -10px 20px 10px rgb(0, 255, 60);
+  height: 100px;
+  animation: shadow 3s infinite;
+}
+
+@keyframes shadow {
+  0%,
+  100% {
+    box-shadow: 0px 0px 10px 10px white;
+  }
+  25% {
+    box-shadow: -10px 0px 10px 5px #ff1d5f, 10px 10px 10px 5px #4922ff;
+  }
+  50% {
+    box-shadow: -10px 0px 10px 5px #4922ff, 10px 10px 10px 5px #ff1d5f;
+  }
+  75% {
+    box-shadow: 0px 0px 10px 10px rgb(17, 0, 255);
+  }
+}
