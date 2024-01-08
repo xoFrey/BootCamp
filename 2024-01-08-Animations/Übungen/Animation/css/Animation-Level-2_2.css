@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 500px;
+  height: 500px;
+}
+
+div {
+  background-color: pink;
+  border-radius: 50px;
+  width: 10%;
+  height: 10%;
+  animation: myanimation 5s infinite;
+}
+
+@keyframes myanimation {
+  0%,
+  100% {
+    background-color: rgb(222, 102, 255);
+  }
+  25% {
+    transform: translateX(50vw);
+    background-color: rgb(123, 123, 242);
+  }
+  50% {
+    transform: translate(50vw, 50vw);
+    background-color: rgb(120, 243, 120);
+  }
+  75% {
+    transform: translateY(50vw);
+    background-color: rgb(249, 87, 87);
+  }
+}
+
+div:hover {
+  animation-play-state: paused;
+}
