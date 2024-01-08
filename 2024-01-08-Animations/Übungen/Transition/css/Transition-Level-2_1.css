@@ -41,13 +41,13 @@ img {
   transition: 1s linear;
 }
 
+.container:hover .discover {
+  top: 0px;
+}
+
 /* # Warum wird bei img immer hover neu aktiviert???  */
 /* # Wenn man oberen container anspricht passiert das nicht.  */
 
 /* img:hover ~ .discover {
   top: 0px;
 } */
-
-.container:hover .discover {
-  top: 0px;
-}
