@@ -44,7 +44,7 @@ img {
 /* # Warum wird bei img immer hover neu aktiviert???  */
 /* # Wenn man oberen container anspricht passiert das nicht.  */
 
-/* img:hover .discover {
+/* img:hover ~ .discover {
   top: 0px;
 } */
 

@@ -1,5 +1,30 @@
+section {
+  background-color: rgb(176, 176, 176);
+  position: relative;
+  height: 15vh;
+  width: 100vw;
+}
+
 div {
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+.red {
+  background-color: red;
+  transition: all 4s 0s linear;
+}
+
+.green {
   background-color: green;
+  bottom: 0;
+  transition: all 3s 1s linear;
+}
+
+section:hover .green {
+  transform: translateX(92vw);
+}
+section:hover .red {
+  transform: translateX(92vw);
 }
