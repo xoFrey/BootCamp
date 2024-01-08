@@ -1,0 +1,192 @@
+/* ! ==== Transform und Transition ==== */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div {
+  background-color: pink;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  height: 120px;
+  width: 120px;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* *Transition - die Zeit für die Animation */
+  /* Wichtig - transition muss dem Hauptelement gegeben werden, nicht dem hover */
+  /* man kann mehreren Elementen transition zuweisen, mit Komma trennen =   transition: background-color 1s, transform 5s; */
+  /* : all = animiert alles  */
+  /* : background-color, color, transform etc - spezifikationen */
+  /* -Erster Wert - was soll animiert werden */
+  /* -Zweiter Wert - wielange soll das dauern */
+  /* -Dritter Wert - wie lange es verzögert sein  */
+  /* -Vierter Wert - wie soll die Animation ablaufen: */
+  /* ease-in-out: schnell - langsam - schnell  */
+  /* mit cubic-bezier kann man die Werte individuell einstellen beim 4. wert */
+  transition: all 1s 0s ease-in-out;
+}
+
+div:hover {
+  /* ! Transform: translate - x,y-Achse */
+  /* *Verschiebt das Element nach Rechts / Links (mit Minuswerten) */
+  transform: translateX(50px);
+  background-color: rgb(145, 145, 255);
+
+  /* Verschieben in Y richtung, X-Achste wird überschrieben */
+  transform: translateY(50px);
+
+  /* Beide Achsen ansprechen */
+  transform: translate(50px, 100px);
+
+  /* ! Transform: rotate - spiegelt auf einer Achse  */
+  /* animiert seitliche rotation  */
+  transform: rotateY(180deg);
+
+  /* animiert oben unten rotation */
+  transform: rotateX(360deg);
+
+  /*  animiert die rotation um die eigene achse  */
+  transform: rotateZ(50deg);
+
+  /* !Scale */
+  /* die zahl mal der größe die schon existiert */
+  /* Animiert die höhe und breite - 2: es wird zweimal so groß */
+  transform: scale(3);
+
+  /* Animiert die Breite/Höhe - Streckt das bild und auch die Schrift */
+  transform: scaleX(2);
+
+  transform: scaleY(2);
+
+  /* !Skew  */
+  /* animiert die höhe und breite der Ecken */
+  transform: skew(-10deg, -10deg);
+
+  /* ! Mehrere als Shorthand */
+  transform: translate(50px, 50px) rotate(90deg) scale(0.3);
+
+  /* !transform origin */
+  transform: rotate(50deg);
+  /* Koordinaten wo transform ansetzt */
+  transform-origin: bottom left;
+}
+
+/* ! === Animation === */
+
+section p {
+  font-size: 50px;
+  /* Mit Animation rufe ich den Namen der Animation (Keyframes) auf */
+  /* Erster Wert = Name der Animation in Keyframes */
+  /* Zweiter Wert  = Länge der Animation */
+  /* dritter Wert = Art und Weise der Animation  */
+  /* vierter Wert = Wie oft soll die Animation durchgeführt werden   */
+  /* fünfter Wert = Animationsrichtung */
+  /* sechster Wert = Verzögerungswert am start der animation */
+  /* Alternate: Wechselt die Richtung der Animation
+  Reverse: dreht sich in die andere richtung
+  forwards: dreht sich und bleibt an der letzten position stecken
+   */
+  /* animation: rotateheart 2s linear infinite normal 3s; */
+}
+
+@keyframes scaleBig {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    font-size: 100px;
+  }
+}
+
+/* * Mit dem % Timeline aknn ich angeben wann was passieren soll, kann man so fein wie möglich machen  */
+@keyframes rotateheart {
+  0%,
+  100% {
+    color: red;
+    transform: scale(1);
+  }
+
+  50% {
+    color: blue;
+    transform: scale(2);
+  }
+}
+
+h1 {
+  /* animation: scaleBig 2s linear infinite; */
+}
+
+.animation {
+  background-color: gray;
+  height: 500px;
+  width: 500px;
+}
+
+.animation article {
+  height: 50%;
+  width: 50%;
+  background-color: pink;
+  animation: move 5s linear infinite;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    background-color: pink;
+  }
+  25% {
+    transform: translateY(100%);
+  }
+  59% {
+    transform: translate(100%, 100%);
+  }
+  75% {
+    transform: translateX(100%);
+  }
+}
+
+.loading {
+  background-color: rgb(74, 74, 255);
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading div {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes loader {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+    background-color: rgb(185, 66, 102);
+  }
+}
+
+.loading div:nth-of-type(1) {
+  animation: loader 2s infinite ease-in-out;
+}
+.loading div:nth-of-type(2) {
+  animation: loader 2s infinite ease-in-out 0.2s;
+}
+.loading div:nth-of-type(3) {
+  animation: loader 2s infinite ease-in-out 0.4s;
+}
+.loading div:nth-of-type(4) {
+  animation: loader 2s infinite ease-in-out 0.6s;
+}
