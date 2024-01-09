@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Garamond;
+  src: url(../fonts/CormorantGaramond/CormorantGaramond-Regular.ttf);
+}
+
+:root {
+  --maincolor: #333;
+}
+
+html {
+  font-family: Garamond, sans-serif;
+  font-size: 62.5%;
+  background-color: #e9e9e0;
+}
+/* !header */
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4.5rem;
+  color: var(--maincolor);
+  margin-bottom: 2rem;
+}
+header h1 span {
+  font-size: 3rem;
+  color: var(--maincolor);
+  text-transform: uppercase;
+}
+/* !nav */
+
+nav {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  border-top: 3px double var(--maincolor);
+  border-bottom: 3px double var(--maincolor);
+  margin-bottom: 2rem;
+}
+/* !main */
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* ! main-grid */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.headline {
+  grid-column: 1 / -1;
+}
+
+img {
+  width: 100%;
+}
+.pic {
+  grid-column: 3 / 5;
+  grid-row: 2 / 5;
+}
+
+/* ! Main-grid childs */
+/* *Headlines */
+.headline h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--maincolor);
+}
+
+.main-grid div h3 {
+  font-size: 2.4rem;
+  color: var(--maincolor);
+  margin-bottom: 1rem;
+}
+/* *text */
+.main-grid div p {
+  font-size: 1.6rem;
+  color: var(--maincolor);
+}
+
+/* !Side-grid */
+.side-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* !side-grid childs  */
+.side-grid .sponsors p {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--maincolor);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.side {
+  border: 5px solid var(--maincolor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 4.2rem;
+  text-align: center;
+}
+
+.knives {
+  justify-content: flex-start;
+  padding: 2.5rem 2.8rem;
+}
+
+.side h5 {
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.side h4 {
+  color: var(--maincolor);
+  font-size: 2.4rem;
+}
+
+.side p {
+  font-size: 1.6rem;
+  color: var(--maincolor);
+}
+
+.side a {
+  font-size: 2rem;
+  color: #737b80;
+  border-bottom: 1px solid #737b80;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.side-grid div img {
+  border: 5px solid var(--maincolor);
+  padding: 2.5rem;
+}
