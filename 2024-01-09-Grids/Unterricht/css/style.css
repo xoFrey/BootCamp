@@ -1,0 +1,109 @@
+div:nth-child(odd) {
+  background-color: rgb(112, 112, 255);
+}
+
+div:nth-child(even) {
+  background-color: rgb(255, 209, 123);
+}
+
+/* # === VERSION 1 GRID === */
+/* ! === Grid System! === */
+/* -Column sind Horizontal - links nach rechts */
+/* -Rows sind Vertical - oben nach unten */
+/* Man nutzt fast nur columns! */
+/* *Display:grid - Elternelement geben!  */
+
+.grid-parent {
+  background-color: rgb(233, 233, 233);
+  min-height: 100vh;
+  display: grid;
+
+  /* ! Bau erstmal die Basis der Columns auf */
+  /* *Einheit Fraction */
+  /* 1fr (fraction) = Bruchteil vom Verfügbaren rest */
+  /* 2fr  = sind doppelt so groß wie 1fr */
+  /* Für 4 columns:  */
+  /* !Columns */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* Kurzschreibweise:  */
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr) 2fr; */
+  /* Wenn man ein teil customizen will, dann eher so schreiben: */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 2fr; */
+  /* Man kann auch mit anderen Einheiten mixen, allerdings ist fr für grid gemacht und sehr responsiv */
+  /* !Rows */
+  /* *Rows werden automatisch hinzugefügt, also braucht man den Befehl nicht wirklich */
+  /*   grid-template-rows: repeat(5, 1fr); */
+
+  /* !Gap */
+  /* oben unten */
+  row-gap: 5px;
+  /* links rechts */
+  column-gap: 5px;
+  /* überall */
+  gap: 5px;
+}
+
+/* ! Kindelement stylen */
+section .box1 {
+  background-color: pink;
+
+  /* Mit Column start sage ich wo das Element starten soll und mit end wo es enden soll (man muss immer +1 machen um zu sagen wo es enden soll) */
+  /* *mit span muss man nicht +1 machen */
+  /* grid-column-start: 1;
+  grid-column-end: span 4; */
+  /* Kurzschreibweise: */
+  /* span benutzen - mit span sagen wir er soll sich über 4 Elemente erstrecken (es wird also nicht mehr der rand gezählt) */
+  /* grid-column: 1 / span 3;
+
+  grid-row-start: 1;
+  grid-row-end: 3; */
+
+  /* mit -1 nimmt er immer die ganze Breite ein */
+  /* Vorteil für Handystyles und andere größen */
+  /* grid-column: 1 / -1; */
+  /* !Content mit grid platzieren */
+  /* *In Kombination mit display:flex  */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /* *Align- und Justify-self */
+  /* - Nutzt man nur für kleine positionings, wenn man KEIN hintergrundbild braucht.  */
+  /* default - stretch */
+  /* align-self: stretch;
+  justify-self: stretch; */
+  /* align-self: center;
+  justify-self: center; */
+  /* *Kurzschreibweise: */
+  /* Erster wert justify, zweiter wert align */
+  /* place-self: center center; */
+}
+
+.grid-parent div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* # === VERSION 2 === */
+/* man braucht aber das grid trotzdem, das ist nur zum "ansprechen" */
+/* mit grid-template-areas können wir die Felder beschriften */
+/* Felder im Grid sollte zur Verfügung stehen */
+
+/* !Grid Areas */
+/* eher uncommon aber existiert - zu viel schreibarbeit*/
+/* wie grid-column start und end */
+
+.grid-parent {
+  grid-template-areas:
+    "header header header header"
+    "main main main side"
+    "footer footer footer footer";
+}
+/* Um grid-area zu verwenden, muss ich dem Elternelement grid-area-template vergeben. Hier sage ich dann wo das Kindelement hin soll (grid-area) */
+
+section .box10 {
+  background-color: brown;
+  grid-area: main;
+}
