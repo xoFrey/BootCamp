@@ -21,20 +21,19 @@ html {
 header {
   text-align: center;
 }
+/* # mit font-variant: small-caps;  kann man header h1 mit dem span umgehen*/
+/* die uper7000 und ews werden groß geschrieben aber in der font kleiner gemacht  */
 
 header h1 {
   font-size: 4.5rem;
   color: var(--maincolor);
   margin-bottom: 2rem;
+  font-variant: small-caps;
 }
-header h1 span {
-  font-size: 3rem;
-  color: var(--maincolor);
-  text-transform: uppercase;
-}
+
 /* !nav */
 
-nav {
+.nav {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
@@ -51,6 +50,7 @@ main {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  margin: 0 50px;
 }
 
 /* ! main-grid */
@@ -90,6 +90,10 @@ img {
 .main-grid div p {
   font-size: 1.6rem;
   color: var(--maincolor);
+}
+
+.pic p {
+  font-style: italic;
 }
 
 /* !Side-grid */
