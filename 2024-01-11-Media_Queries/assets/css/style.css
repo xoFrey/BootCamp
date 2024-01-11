@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* *Overflow gibt an ob ein übergroßer Inhalt in einem Element beschnitten, sichtbar oder scrollbar sein soll  */
+.overflow {
+  background-color: pink;
+  /* height: 500px;
+  overflow: scroll; */
+  /* hidden - nicht sichtbar
+  scroll - scrollbalken entsteht */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.overflow div {
+  width: 45vw;
+}
+
+.overflow img {
+  width: 45vw;
+}
+
+header {
+  background-color: rgb(202, 242, 255);
+}
+
+.burger {
+  height: 5px;
+  width: 25px;
+  background-color: black;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+.burger-wrapper {
+  top: 30px;
+  right: 30px;
+  /* position fixed bezieht sich auf die ganze Seite */
+  position: fixed;
+  display: none;
+}
+
+.container {
+  background-color: rgb(255, 224, 230);
+  padding: 30px;
+  height: 250px;
+  position: relative;
+  margin: 20px;
+}
+
+.container img {
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.back-to-top {
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* !Media Queries */
+/* Handy - 567px */
+/* Tablets - 768px */
+/* Desktop - 992px */
+
+/* * Desktop -> Handy (max-width) */
+/* Das bedeutet dass das Design greift, wenn die maximale Breite erreicht oder unterschritten ist */
+
+/* * Handy -> Desktop (min-width) */
+/* Das bedeutet dass das Design greift, wenn die maximale Breite erreicht oder überschritten ist */
+
+/* * Verschiedene Medientypen */
+/* alle Endgeräte */
+/* - print (Druckversion) */
+/* - screen (Bildschrim) */
+
+/* *logische Operatoren */
+/* - and = Kombiniert verschiedene Media Queries */
+/* - not = schließt aus */
+/* - only =  benötigt medientyp, Unterstützt alte Browser */
+/* - Komma / or = mehrere Queries , greift entweder oder das eine */
+
+/* ! Syntax Media Queries */
+/* : von Desktop auf Tablet und von Tablet auf Handy */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 10px;
+  }
+
+  .overflow {
+    background-color: rgb(255, 37, 255);
+    flex-direction: column;
+    padding: 30px 40px;
+  }
+
+  .overflow div,
+  .overflow img {
+    width: auto;
+  }
+
+  .burger-wrapper {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+}
+
+/* nicht einschränken nach unten einfach von oben runter und dann mit only screen  */
+@media (min-width: 320px) and (max-width: 567px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+  .overflow {
+    background-color: rgb(173, 249, 173);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 10px;
+    color: black;
+  }
+
+  header {
+    background-color: blue;
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 1;
+    color: white;
+  }
+}
+
+/* *Wert zur veranschaulichung von landscape, sonst anderer wert (gibt richtwerte für landscape) */
+@media (max-width: 320px) and (orientation: landscape) {
+  .overflow {
+    background-color: rgb(255, 141, 238);
+  }
+}
