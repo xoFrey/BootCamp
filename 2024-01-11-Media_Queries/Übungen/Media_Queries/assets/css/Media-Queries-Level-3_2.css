@@ -1,0 +1,430 @@
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: RockSalt;
+  src: url(../fonts/RockSalt/RockSalt-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --maincolor: #df8480;
+  --sidecolor: #242424;
+  --secondaryside: #7b7b7b;
+}
+img {
+  max-width: 100%;
+}
+/* # === Mobile Version === */
+
+/* !Header */
+
+.header {
+  background: url(../img/dog/Frame\ 2.png) no-repeat center bottom;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header h1 {
+  font-family: RockSalt, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.header p {
+  font-family: Nunito, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-align: right;
+  color: var(--maincolor);
+  width: 35vw;
+  padding-right: 1.6rem;
+}
+
+.header div {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* ! Header desktop! */
+
+.lieferando-desk {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.lieferando-desk div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lieferando-desk div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lieferando-desk p {
+  background-color: var(--maincolor);
+  color: white;
+  height: 50vh;
+  width: 50vw;
+}
+.lieferando-desk img {
+  height: 50vh;
+  width: 50vw;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.lieferando-desk p {
+  font-family: Nunito, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 900;
+  color: white;
+  padding: 2.4rem 2.4rem 0 24rem;
+  text-align: right;
+}
+
+.lieferando-desk h1 {
+  font-family: RockSalt;
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 2.4rem;
+}
+
+/* !Main */
+
+/* !pink-bar */
+.pink-bar {
+  background-color: var(--maincolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem 1rem;
+}
+
+.pink-bar p {
+  font-family: Nunito, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: white;
+}
+
+/* !instructions */
+
+.instruction div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.instruction .number {
+  font-family: Nunito, sans-serif;
+  font-size: 4.8rem;
+  font-weight: 900;
+  color: var(--maincolor);
+}
+
+.instruction p {
+  font-family: Nunito, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+/* !Menu */
+
+.menu article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+/* *dog pic */
+
+.menu article img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* * Food pic */
+.menu article div {
+  background: url(../img/dog/food.png) no-repeat center;
+  background-size: contain;
+  height: 186px;
+  width: 186px;
+  position: relative;
+  margin-bottom: 4.8rem;
+}
+
+.menu .one {
+  font-family: Nunito, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: absolute;
+  top: 10px;
+  left: -70px;
+}
+
+.menu .two {
+  font-family: Nunito, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: absolute;
+  right: -70px;
+  top: 80px;
+}
+
+.menu .three {
+  font-family: Nunito, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+/* *Menu p tag */
+.menu-p {
+  font-family: Nunito, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 8rem;
+  margin-bottom: 3.2rem;
+}
+
+/* !Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sidecolor);
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+}
+
+footer p {
+  font-family: Nunito, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  padding-top: 1.6rem;
+  margin-bottom: 2.4rem;
+  width: 34.1rem;
+  text-align: center;
+}
+
+footer p:last-child {
+  margin-bottom: 3.2rem;
+}
+
+input {
+  width: 38.2rem;
+  height: 5.4rem;
+  border-radius: 74px;
+  margin-bottom: 1.6rem;
+}
+
+input[type="email"] {
+  border-color: white;
+  border-style: solid;
+  text-align: center;
+}
+
+input[type="email"]::placeholder {
+  font-family: Nunito;
+  color: var(--secondaryside);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+input[type="submit"] {
+  border-color: var(--maincolor);
+  background-color: var(--maincolor);
+  border-style: solid;
+  text-align: center;
+  font-family: Nunito;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6.4rem;
+}
+
+/* # === TABLET === */
+/* *Media Queries - 601px - 900px Medium */
+
+@media only screen and (min-width: 601px) {
+  /* !Instruction */
+  .instruction div {
+    align-items: baseline;
+    flex-direction: row;
+    gap: 1.6rem;
+    margin-left: 6rem;
+  }
+
+  /* !menu */
+
+  .menu article {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu article img {
+    width: 50vw;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .menu article div {
+    width: 50vw;
+    margin-bottom: 0;
+    margin-right: 50px;
+    object-fit: contain;
+  }
+  /* !menu food pic */
+
+  .menu .one {
+    top: 10px;
+    left: 0px;
+  }
+
+  .menu .two {
+    right: -10px;
+    top: 80px;
+  }
+
+  .menu .three {
+    bottom: -20px;
+    left: 0;
+  }
+
+  /* !footer */
+  .logos {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .logos div {
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    gap: 2.4rem;
+  }
+  .logos p {
+    width: 18.5rem;
+  }
+}
+
+/* # === DESKTOP ===  */
+/* *Media Queries - 901px - 1200px Large */
+
+@media only screen and (min-width: 901px) {
+  .header {
+    display: none;
+  }
+  .lieferando-desk {
+    display: block;
+  }
+
+  .pink-bar {
+    background-color: white;
+  }
+  .pink-bar p {
+    color: var(--maincolor);
+    font-size: 4.8rem;
+    font-weight: 900;
+  }
+
+  .instruction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .instruction div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .instruction p {
+    width: 15vw;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 1.6rem;
+  }
+
+  .menu-p {
+    background-color: var(--maincolor);
+    color: white;
+    height: 250px;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    padding: 6.2rem 1.6rem;
+    border-radius: 8px;
+  }
+
+  .menu article img {
+    width: 30vw;
+    border-radius: 8px;
+  }
+
+  .menu article div {
+    width: 30vw;
+  }
+}
+
+/* # === Large Desktop === */
+
+@media screen and (min-width: 1201px) {
+  main,
+  menu {
+    padding: 0 10rem;
+  }
+
+  .lieferando-desk p {
+    height: 75vh;
+  }
+  .lieferando-desk img {
+    height: 75vh;
+  }
+}
