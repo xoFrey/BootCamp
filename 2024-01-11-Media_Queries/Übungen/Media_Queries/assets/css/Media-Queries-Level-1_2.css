@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* !Color for sections */
+header {
+  background-color: rgb(148, 237, 255);
+}
+
+.one {
+  background-color: rgb(81, 255, 171);
+}
+.two {
+  background-color: rgb(255, 219, 119);
+}
+.three {
+  background-color: rgb(161, 107, 255);
+}
+.four {
+  background-color: rgb(230, 131, 255);
+}
+
+aside {
+  background-color: rgb(96, 96, 253);
+}
+footer {
+  background-color: rgb(255, 94, 94);
+}
+/* !Boxen stylen */
+header,
+article,
+aside,
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* !Grid */
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+header {
+  grid-column: 1/-1;
+}
+
+footer {
+  grid-column: 1 / -1;
+}
+
+aside {
+  grid-row: 2 / 4;
+  grid-column-start: 3;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  aside {
+    grid-column: 1 /3;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .wrap {
+    grid-template-columns: repeat(1, 1fr);
+  } */
+  /* aside,
+  header,
+  footer {
+    grid-column-end: 2;
+  } */
+}
