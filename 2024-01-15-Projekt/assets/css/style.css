@@ -70,6 +70,10 @@ header h2 {
   margin-bottom: 3.6rem;
 }
 
+header img {
+  margin-bottom: 17.4rem;
+}
+
 /* ! Main section price */
 main {
   position: relative;
@@ -105,10 +109,10 @@ main {
 .delivery {
   background: url(../img/home_deliverables.png) no-repeat left;
   background-size: contain;
-  height: 90vh;
-  position: absolute;
-  left: 10vw;
-  top: 5vh;
+  height: 80vh;
+  margin: 0 auto;
+  width: 80vw;
+  margin-bottom: 12.7rem;
 }
 
 .delivery article {
@@ -255,7 +259,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 .question div {
   display: flex;
@@ -281,4 +285,10 @@ main {
   color: var(--maintext);
   font-size: 1.6rem;
   text-decoration: none;
+}
+
+/* ! Hover */
+.button:hover {
+  background-color: var(--maintext);
+  color: white;
 }
