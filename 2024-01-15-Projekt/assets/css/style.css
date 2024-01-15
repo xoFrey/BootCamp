@@ -1,0 +1,98 @@
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Graphik-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Inter;
+}
+
+:root {
+  --maintext: #2b2c2e;
+  --subtext: #9fa2a7;
+}
+
+/* !Header */
+/* *Nav Bar */
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 11rem;
+  padding: 1.7rem 5vw;
+}
+
+header nav div {
+  display: flex;
+  gap: 2.3rem;
+}
+
+header nav div a {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--maintext);
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  color: var(--maintext);
+}
+
+.button {
+  border: 1px solid #48494c;
+  border-radius: 4px;
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 0.7rem 5.8rem;
+  text-decoration: none;
+  color: var(--maintext);
+}
+
+/* header */
+header h2 {
+  color: var(--maintext);
+  font-size: 3.9rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 3.6rem;
+}
+
+/* ! Main section price */
+
+.price {
+  display: flex;
+  gap: 8rem;
+  padding: 10vh 30vw 0 10vw;
+  margin-bottom: 21rem;
+}
+.price div {
+  width: 30vw;
+}
+
+.text {
+  color: var(--maintext);
+  font-size: 2.1rem;
+  line-height: 152%;
+}
+
+.price div p:nth-of-type(1) {
+  font-size: 6.1rem;
+  font-weight: 700;
+}
+.price div p:nth-of-type(2) {
+  font-size: 2rem;
+  color: var(--subtext);
+}
