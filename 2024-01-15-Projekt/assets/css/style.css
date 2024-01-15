@@ -71,6 +71,9 @@ header h2 {
 }
 
 /* ! Main section price */
+main {
+  position: relative;
+}
 
 .price {
   display: flex;
@@ -94,5 +97,188 @@ header h2 {
 }
 .price div p:nth-of-type(2) {
   font-size: 2rem;
+  color: #9fa2a7;
+}
+
+/* ! Section delivery */
+
+.delivery {
+  background: url(../img/home_deliverables.png) no-repeat left;
+  background-size: contain;
+  height: 90vh;
+  position: absolute;
+  left: 10vw;
+  top: 5vh;
+}
+
+.delivery article {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40vw;
+  padding-right: 10vw;
+  padding-top: 10vh;
+}
+
+.delivery h2 {
+  color: var(--maintext);
+  font-size: 5.5rem;
+  margin-bottom: 6.1rem;
+}
+
+.delivery div h3 {
+  font-size: 2.3rem;
+  color: var(--maintext);
+  margin-bottom: 2.7rem;
+}
+
+.delivery div p {
   color: var(--subtext);
+  font-size: 2.1rem;
+  line-height: 124%;
+  margin-bottom: 3rem;
+}
+
+/* ! section how-works */
+
+.how-works {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f4;
+  margin: 10vw 10vw;
+}
+
+.how-works img {
+  height: 70vh;
+}
+
+.how-works article {
+  padding: 5.5rem;
+}
+
+.how-works h3 {
+  color: var(--maintext);
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.one {
+  color: var(--subtext);
+  font-size: 1.5rem;
+  padding-left: 2vw;
+}
+.how-works article div p:nth-of-type(2) {
+  color: var(--subtext);
+  font-size: 1.7rem;
+  padding-left: 2vw;
+}
+.how-works article div p:nth-of-type(3) {
+  color: var(--subtext);
+  font-size: 1.5rem;
+  margin-bottom: 1.7rem;
+  padding-left: 2vw;
+}
+
+.who {
+  color: var(--subtext);
+  font-size: 1.6rem;
+}
+
+/* ! Section critique */
+
+.crit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+}
+
+.crit h2 {
+  font-size: 5rem;
+  color: var(--maintext);
+  font-weight: 700;
+  margin-bottom: 4.3rem;
+}
+
+.crit p:nth-of-type(1) {
+  font-size: 1.6rem;
+  color: var(--subtext);
+  margin-bottom: 1.6rem;
+}
+.crit p:nth-of-type(2) {
+  font-size: 1.5rem;
+  color: var(--subtext);
+  margin-bottom: 12.7rem;
+}
+
+/* !Section percent */
+
+.percent {
+  background: url(../img/28.png) no-repeat top;
+  background-size: contain;
+  margin: 5vh;
+  height: 50vh;
+  position: relative;
+}
+.percent div img {
+  width: 45vw;
+  position: absolute;
+  bottom: -90px;
+  right: 0;
+  margin-right: 10vw;
+}
+
+.percent div article {
+  position: absolute;
+  bottom: 0;
+  left: 20vw;
+}
+
+.percent div article p {
+  font-size: 2rem;
+  color: var(--subtext);
+  margin-bottom: 2.2rem;
+}
+
+.border {
+  border-bottom: 1px solid var(--subtext);
+  width: 65vw;
+  margin: 0 auto;
+  margin-top: 25vh;
+  margin-bottom: 9.6rem;
+}
+/* ! Questions */
+
+.question {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10vh;
+}
+.question div {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.question h2 {
+  color: var(--maintext);
+  font-size: 4.8rem;
+}
+.question div img {
+  width: 100px;
+  height: 139px;
+}
+
+.question div p {
+  color: var(--subtext);
+  font-size: 1.6rem;
+}
+.question div a {
+  color: var(--maintext);
+  font-size: 1.6rem;
+  text-decoration: none;
 }
