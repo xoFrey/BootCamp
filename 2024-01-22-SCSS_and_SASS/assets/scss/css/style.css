@@ -1,0 +1,61 @@
+/*
+Error: Invalid CSS after "... @include mixin": expected "}", was ".text(center, w..."
+        on line 23 of sass/style.scss
+
+18: section {
+19:   header {
+20:     margin-bottom: 2.5rem;
+21:     div {
+22:       h1 {
+23:         @include mixin.text(center, white, 1.8rem, "Verdana");
+24:         padding: variables.$spacing;
+25:         background-color: variables.$bg-color;
+26:         text-decoration: underline;
+27:       }
+28:       h2 {
+
+Backtrace:
+sass/style.scss:23
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:690:in `block'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:758:in `declaration_or_ruleset'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+<internal:kernel>:187:in `loop'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"... @include mixin\": expected \"}\", was \".text(center, w...\"\A         on line 23 of sass/style.scss\A \A 18: section {\A 19:   header {\A 20:     margin-bottom: 2.5rem;\A 21:     div {\A 22:       h1 {\A 23:         @include mixin.text(center, white, 1.8rem, \"Verdana\");\A 24:         padding: variables.$spacing;\A 25:         background-color: variables.$bg-color;\A 26:         text-decoration: underline;\A 27:       }\A 28:       h2 {"; }
