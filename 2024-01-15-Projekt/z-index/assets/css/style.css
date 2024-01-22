@@ -14,16 +14,15 @@ section {
   position: relative;
 }
 
-.pers {
-}
 .card {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  width: 20vw;
+  width: 30vw;
   border-radius: 20px;
   perspective: 1000px;
-  transform: rotateX(30deg) rotateY(-20deg);
+  transform: rotateX(30deg) rotateY(-20deg) rotateZ(3deg);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .one {
