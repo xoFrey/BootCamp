@@ -1,0 +1,42 @@
+@use "mixin";
+@use "variables";
+
+// *CSS
+// section header h2 {
+//   background-color: pink;
+// }
+
+// *SASS
+// section
+//     header
+//         h2 {
+//             color: white;
+//         }
+
+// *SCSS
+section {
+  header {
+    h2 {
+      color: variables.$text-color;
+      background-color: variables.$bg-color;
+    }
+  }
+}
+
+section {
+  header {
+    margin-bottom: 2.5rem;
+    div {
+      h1 {
+        @include mixin.text(center, white, 1.8rem, "Verdana");
+        padding: variables.$spacing;
+        background-color: variables.$bg-color;
+        text-decoration: underline;
+      }
+      h2 {
+        @include mixin.text(center, black, 1.5rem, "Verdana");
+        background-color: pink;
+      }
+    }
+  }
+}

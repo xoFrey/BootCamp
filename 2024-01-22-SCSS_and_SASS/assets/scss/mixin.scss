@@ -1,0 +1,6 @@
+@mixin text ($text-align, $color, $font-size, $font-family){
+    text-align:$text-align;
+    color: $color;
+    font-size:$font-size;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
