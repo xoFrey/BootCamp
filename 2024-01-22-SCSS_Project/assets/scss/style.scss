@@ -1,0 +1,15 @@
+@use "mixin";
+@use "var";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  @include mixin.flex(flex, column, nowrap, center, center);
+  background-color: blue;
+  background: url() no-repeat left;
+}
+
