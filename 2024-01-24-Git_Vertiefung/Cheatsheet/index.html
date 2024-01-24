@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body><main>
+    <h1>Git Cheat Sheet</h1>
+      <!-- !basics -->
+    <h3>Basics commands</h3>
+    <section class="basic">
+      <article>
+        <div class="front">
+          <h2>git add .</h2>
+        </div>
+        <div class="back">
+          <p>
+            Fügt eine Änderung aus den Arbeitsverzeichnis zu Staging-area hinzu.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git add FILENAME</h2>
+        </div>
+        <div class="back">
+          <p>
+            Hier kann man auch nur eine Datei in die Staging-area hinzufügen.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git commit -m "Text"</h2>
+        </div>
+        <div class="back">
+          <p>
+            Erstellt einen neune commit mit einer Nachricht "Text was geändert
+            wurde"
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git push</h2>
+        </div>
+        <div class="back">
+          <p>
+            ladet die dateien die zuvor mit " git add . " in die staging area
+            bewegt worden sind in das Github Repo
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git log</h2>
+        </div>
+        <div class="back">
+          <p>
+            hier kann ich mir alle Commits angucken die gemacht worden sind 
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git status</h2>
+        </div>
+        <div class="back">
+          <p>hier kann ich sehen welche datei veränder worden sind</p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git pull</h2>
+        </div>
+        <div class="back">
+          <p>Mit "git pull" lade ich die geänderten datein herunter</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- !branches -->
+    <h3>Branches anlegen und wechseln</h3>
+    <section class="branches">
+      <article>
+        <div class="front">
+          <h2>git branch</h2>
+        </div>
+        <div class="back">
+          <p>
+            Zeigt alle vorhanden branches an. (* ist wo man sich gerade befindet)
+        </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git branch BRANCHNAME</h2>
+        </div>
+        <div class="back">
+          <p>
+            legt einen neune branch an
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git checkout BRANCHNAME</h2>
+        </div>
+        <div class="back">
+          <p>
+            wechselt zu einen neuen branch
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git checkout -b BRANCHNAME </h2>
+        </div>
+        <div class="back">
+          <p>
+            legt einen neune branch BurgerMenu2 an und wechselt dahin
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="front">
+          <h2>git branch -d BRANCHNAME</h2>
+        </div>
+        <div class="back">
+          <p>
+            Löscht den branch BRANCHNAME
+          </p>
+        </div>
+      </article>
+
+    </section>
+      <!-- !merges -->
+    <h3>Ablauf eines Merges</h3>
+    <section class="merge">
+        <article>
+          <div class="front">
+            <h2>git checkout main</h2>
+          </div>
+          <div class="back">
+            <p>
+                Wechselt zum main branch (Davor muss man sich auf den main branch befinden)            </p>
+          </div>
+        </article>
+        <article>
+          <div class="front">
+            <h2>git merge BRANCHNAME</h2>
+          </div>
+          <div class="back">
+            <p>
+                Versucht den main Branch mit den BurgerMenu Branch zusammenzuführen
+            </p>
+          </div>
+        </article>
+        <article>
+            <div class="front">
+              <h2>git add .</h2>
+            </div>
+            <div class="back">
+              <p>
+                Fügt eine Änderung aus den Arbeitsverzeichnis zu Staging-area hinzu.
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="front">
+              <h2>git commit -m "Text"</h2>
+            </div>
+            <div class="back">
+              <p>
+                Erstellt einen neune commit mit einer Nachricht "Text was geändert
+                wurde"
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="front">
+              <h2>git push</h2>
+            </div>
+            <div class="back">
+              <p>
+                ladet die dateien die zuvor mit " git add . " in die staging area
+                bewegt worden sind in das Github Repo
+              </p>
+            </div>
+          </article>
+        
+        <article>
+          <div class="front">
+            <h2>git branch -d BRANCHNAME</h2>
+          </div>
+          <div class="back">
+            <p>Löscht den branch, den wir erstellt haben
+            </p>
+          </div>
+        </article>
+    
+    </main>
+  </body>
+</html>
