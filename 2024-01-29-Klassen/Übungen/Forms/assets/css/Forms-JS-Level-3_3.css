@@ -1,0 +1,17 @@
+input,
+label {
+  color: white;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 30vw;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
