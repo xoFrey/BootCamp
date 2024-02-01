@@ -5,6 +5,7 @@ function writeText() {
 
   const check =
     inputText.value.length > 0
-      ? (outputText.textContent = inputText.value)
+      ? ((outputText.textContent = inputText.value),
+        (errorText.textContent = ""))
       : (errorText.textContent = "Bitte geben Sie eine Nachricht ein!");
 }
