@@ -1,6 +1,7 @@
 function airQuality() {
   const airValue = Number(document.querySelector("#airquality").value);
   const airValueNumber = document.querySelector(".number");
+  // airValueNumber.textContent = airValue; -> oder innerText  auch möglich um einfach nur den Text zu ändern
   airValueNumber.innerHTML = airValue;
   const bgColor = document.querySelector(".wrapper");
   const levelHealth = document.querySelector("div");
