@@ -1,10 +1,9 @@
 function showtxt() {
   const listSelection = document.querySelector("#mylist").value;
-  console.log(listSelection);
+
   const measureInfo = document.querySelector("#masse");
-  measureInfo.innerHTML = "Hallo";
+
   const headlineInfo = document.querySelector(".boxMasse b");
-  headlineInfo.innerHTML = "Hiiii";
 
   switch (listSelection) {
     case "0":
