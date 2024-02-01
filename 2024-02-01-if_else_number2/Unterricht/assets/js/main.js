@@ -83,6 +83,20 @@ if (zahl % 2 === 0) {
 const evenOrNot = zahl % 2 === 0 ? zahl + " ist grade" : zahl + " ist ungerade";
 console.log("ternary " + zahl);
 
+// Wochentage mit ternary
+// Nicht mit ternary machen, zu clusterfuck - und braucht immer einen Return und false wert 
+let today2 = "Montag";
+
+const wochentag =
+  today2 === "Montag"
+    ? "Es ist Montag"
+    : today2 === "Dienstag"
+    ? "Es ist Dienstag"
+    : today2 === "Mittwoch"
+    ? "Es ist Mittwoch"
+    : null;
+
+console.log(wochentag);
 // # === Scopes ===
 
 // der global scope definiert sich dadurch dass es direkt im JS dokument definiert wird, ohne in irgendwelchen funktionen, methoden etc. definiert wird
