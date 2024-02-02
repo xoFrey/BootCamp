@@ -8,16 +8,17 @@ function sliceEmUp() {
   const error = document.querySelector(".error");
 
   if (inputText.length > 0) {
-    console.log("yo");
     error.innerHTML = "";
-    if (before == true) {
+    if (before == true && inputText.indexOf(sliceText) >= 0) {
       first.innerHTML = inputText.slice(0, inputText.search("a"));
       second.innerHTML = inputText.slice(inputText.search("a"));
-    } else {
+    } else if (after == true && inputText.indexOf(sliceText) >= 0) {
       first.innerHTML = inputText.slice(0, inputText.search("a") + 1);
       second.innerHTML = second.innerHTML += inputText.slice(
         inputText.search("a") + 1
       );
+    } else {
+      error.innerHTML = "Zeichen in Zeichenkette nicht vorhanden!";
     }
   } else {
     error.innerHTML = "Bitte geben Sie einen Text ein!";
