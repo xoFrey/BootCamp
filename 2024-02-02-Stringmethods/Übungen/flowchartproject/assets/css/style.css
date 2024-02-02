@@ -14,3 +14,14 @@ form {
 h5 {
   color: red;
 }
+
+section {
+  text-align: center;
+}
+img {
+  object-fit: contain;
+}
+
+.second {
+  margin-bottom: 3rem;
+}
