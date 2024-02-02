@@ -8,8 +8,7 @@ function showtxt() {
   switch (listSelection) {
     case "0":
       headlineInfo.innerHTML = "Brief und Postkarte";
-      measureInfo.textContent =
-        "L: 10 - 23,5 cm    B:7 - 12,5 cm     H: bis 1 cm";
+      measureInfo.innerHTML = `L: 10 - 23,5 cm <br> B:7 - 12,5 cm <br> H: bis 1 cm`;
       break;
     case "1":
       headlineInfo.innerHTML = "DHL Paket 2 kg";
