@@ -1,6 +1,6 @@
 const taxCalculator = (event) => {
   event.preventDefault();
-  const input = Number(document.querySelector("#betrag").value);
+  const input = document.querySelector("#betrag").value;
   const percentage = document.querySelector(
     "input[name=percent]:checked"
   ).value;
@@ -10,8 +10,10 @@ const taxCalculator = (event) => {
     "input[name='brutto-netto']:checked"
   ).value;
   const error = document.querySelector(".error");
+  console.log(input.length);
 
   if (input.length > 0) {
+    error.innerHTML = " ";
     if (brutNet == "netto-to-brutto") {
       if (percentage === "nineteen") {
         let result = input * 1.19;
@@ -42,7 +44,6 @@ const taxCalculator = (event) => {
   }
 };
 
-// #Error log schreiben
 // Brutto to netto and otherway around change function
 const change = () => {
   const brutNet = document.querySelector(
