@@ -14,10 +14,9 @@ const highlight = () => {
     text.innerHTML = highlightedText;
 
     console.log(error.innerHTML);
-  } else if (
-    text.innerHTML.indexOf(searchInput) <= 0 ||
-    searchInput.length <= 0
-  ) {
+  } else if (searchInput.length <= 0) {
     error.innerHTML = " Bitte geben Sie einen Text ein!";
+  } else {
+    error.innerHTML = "Das Wort existiert nicht im Text!";
   }
 };
