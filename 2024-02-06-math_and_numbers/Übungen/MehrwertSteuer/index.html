@@ -10,18 +10,31 @@
     <main>
       <h1>Mehrwertsteuer-Rechner</h1>
       <section>
-        <form>
+        <form onsubmit="taxCalculator(event)">
           <div class="greybox">
             <h3>Was soll berechnet werden?</h3>
             <div>
-              <input type="radio" name="brutto-netto" id="brutto" checked />
-              <label for="brutto"
+              <input
+                onchange="change()"
+                type="radio"
+                name="brutto-netto"
+                id="netto"
+                value="netto-to-brutto"
+                checked
+              />
+              <label for="netto"
                 >Mehrwertsteuer aufschlagen (Netto zu Brutto)</label
               >
             </div>
             <div>
-              <input type="radio" name="brutto-netto" id="netto" />
-              <label for="netto"
+              <input
+                onchange="change()"
+                type="radio"
+                name="brutto-netto"
+                value="brutto-to-netto"
+                id="brutto"
+              />
+              <label for="brutto"
                 >Mehrwertsteuer abschlagen (Brutto zu Netto)</label
               >
             </div>
@@ -29,19 +42,22 @@
           <div class="greybox">
             <h3>Mehrwertsteuersatz</h3>
             <div>
-              <input type="radio" name="percent" id="nineteen" checked />
+              <input type="radio" name="percent" value="nineteen" checked />
               <label for="nineteen">19%</label>
             </div>
             <div>
-              <input type="radio" name="percent" id="seven" />
+              <input type="radio" name="percent" value="seven" />
               <label for="seven">7%</label>
             </div>
           </div>
           <div class="greybox">
-            <p>
-              Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span>*</span>
-            </p>
-            <input type="text" name="" id="nettobetrag" />
+            <label for="betrag">
+              Nettobetrag (Preis ohne Mehrwertsteuer) in Euro
+              <span>*</span></label
+            >
+
+            <input type="number" name="" id="betrag" />
+            <h6 class="error"></h6>
           </div>
           <input type="submit" value="Berechnen" />
         </form>
@@ -52,8 +68,8 @@
           <h5 class="mwst-betrag"></h5>
         </div>
         <div class="greybox">
-          <h3>Bruttobetrag (Endpreis)</h3>
-          <h5 class="brutto-betrag"></h5>
+          <h3 class="endbetrag">Bruttobetrag (Endpreis)</h3>
+          <h5 class="end-betrag"></h5>
         </div>
       </section>
     </main>
