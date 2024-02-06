@@ -1,14 +1,23 @@
-function highlight() {
+const highlight = () => {
   const searchInput = document.querySelector("#search-input").value;
-  const text = document.querySelector("body article");
+  const text = document.querySelector("article");
+  text.innerHTML += `<h4 class="error" style="color:red"></h4>`;
+  const error = document.querySelector(".error");
 
-  if (text.innerHTML.indexOf(searchInput) >= 0 && searchInput != " ") {
-    let highlightedText = text.innerHTML.replaceAll(
+  if (text.innerHTML.indexOf(searchInput) > 0 && searchInput.length > 0) {
+    error.innerHTML = " ";
+
+    let highlightedText = text.innerText.replaceAll(
       searchInput,
       `<span class="highlight">${searchInput}</span>`
     );
     text.innerHTML = highlightedText;
-  } else {
-    text.innerHTML += `<h4 style="color:red">Nicht im text vorhanden</h4>`;
+
+    console.log(error.innerHTML);
+  } else if (
+    text.innerHTML.indexOf(searchInput) <= 0 ||
+    searchInput.length <= 0
+  ) {
+    error.innerHTML = " Bitte geben Sie einen Text ein!";
   }
-}
+};
