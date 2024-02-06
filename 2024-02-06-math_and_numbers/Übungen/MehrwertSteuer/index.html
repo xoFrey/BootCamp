@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Mehrwertsteuer-Rechner</h1>
+      <section>
+        <form>
+          <div class="greybox">
+            <h3>Was soll berechnet werden?</h3>
+            <div>
+              <input type="radio" name="brutto-netto" id="brutto" checked />
+              <label for="brutto"
+                >Mehrwertsteuer aufschlagen (Netto zu Brutto)</label
+              >
+            </div>
+            <div>
+              <input type="radio" name="brutto-netto" id="netto" />
+              <label for="netto"
+                >Mehrwertsteuer abschlagen (Brutto zu Netto)</label
+              >
+            </div>
+          </div>
+          <div class="greybox">
+            <h3>Mehrwertsteuersatz</h3>
+            <div>
+              <input type="radio" name="percent" id="nineteen" checked />
+              <label for="nineteen">19%</label>
+            </div>
+            <div>
+              <input type="radio" name="percent" id="seven" />
+              <label for="seven">7%</label>
+            </div>
+          </div>
+          <div class="greybox">
+            <p>
+              Nettobetrag (Preis ohne Mehrwertsteuer) in Euro <span>*</span>
+            </p>
+            <input type="text" name="" id="nettobetrag" />
+          </div>
+          <input type="submit" value="Berechnen" />
+        </form>
+        <div class="line"></div>
+        <h2>Ergebnis</h2>
+        <div class="greybox">
+          <h3>Mehrwertsteuerbetrag</h3>
+          <h5 class="mwst-betrag"></h5>
+        </div>
+        <div class="greybox">
+          <h3>Bruttobetrag (Endpreis)</h3>
+          <h5 class="brutto-betrag"></h5>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
