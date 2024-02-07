@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Kalorienrechner</h1>
+        <form>
+          <label for="height">Körpergröße</label>
+          <input type="number" id="height" />
+          <label for="age">Alter</label>
+          <input type="number" id="age" />
+          <label for="weight">Gewicht</label>
+          <input type="number" id="weight" />
+          <div>
+            <input type="radio" name="gender" id="female" />
+            <label for="female">Weiblich</label>
+            <input type="radio" name="gender" id="male" />
+            <label for="male">Männlich</label>
+          </div>
+          <select name="activity" id="activity">
+            <option value="0.95">Schlafen</option>
+            <option value="1.2">Nur Sitzen oder Liegen</option>
+            <option value="1.5">
+              Ausschließlich sitzende Tätigkeit mit wenig oder keiner
+              körperlichen Aktivität in der Freizeit, z.B. Büroarbeit
+            </option>
+            <option value="1.7">
+              Sitzende Tätigkeit mit zeitweiliger gehender oder stehender
+              Tätigkeit, z.B. Studierende, Fließbandarbeiter, Laboranten,
+              Kraftfahrer
+            </option>
+            <option value="1.9">
+              Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer,
+              Kellner, Handwerker, Mechaniker, Hausfrauen
+            </option>
+            <option value="2.2">
+              Körperlich anstrengende berufliche Arbeit
+            </option>
+          </select>
+          <input type="submit" value="Submit" />
+        </form>
+        <div class="grid">
+          <div class="row"><p></p></div>
+          <div class="row"><p>kcal</p></div>
+          <div class="row"><p>kJ</p></div>
+          <div><p>Grundumsatz</p></div>
+          <div><p class="grund-kcal"></p></div>
+          <div>
+            <p class="grund-kj"></p>
+          </div>
+          <div><p>Gesamtumsatz</p></div>
+          <div>
+            <p class="gesamt-kcal"></p>
+          </div>
+          <div>
+            <p class="gesamt-kj"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
