@@ -9,7 +9,7 @@ main {
   justify-content: center;
   height: 100vh;
   flex-direction: column;
-  padding-inline: 40vw;
+  padding-inline: 20vw;
 }
 
 section {
@@ -56,4 +56,8 @@ input[type="submit"] {
 input[type="number"] {
   height: 30px;
   border-color: pink;
+}
+
+h4 {
+  color: red;
 }

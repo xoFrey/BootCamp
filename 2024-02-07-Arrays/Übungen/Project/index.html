@@ -10,17 +10,23 @@
     <main>
       <section>
         <h1>Kalorienrechner</h1>
-        <form>
-          <label for="height">Körpergröße</label>
+        <form onsubmit="kcalCalculator(event)">
+          <label for="height">Körpergröße in cm</label>
           <input type="number" id="height" />
           <label for="age">Alter</label>
           <input type="number" id="age" />
-          <label for="weight">Gewicht</label>
+          <label for="weight">Gewicht in kg</label>
           <input type="number" id="weight" />
           <div>
-            <input type="radio" name="gender" id="female" />
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              value="female"
+              checked
+            />
             <label for="female">Weiblich</label>
-            <input type="radio" name="gender" id="male" />
+            <input type="radio" name="gender" id="male" value="male" />
             <label for="male">Männlich</label>
           </div>
           <select name="activity" id="activity">
@@ -43,6 +49,7 @@
               Körperlich anstrengende berufliche Arbeit
             </option>
           </select>
+          <h4 class="error"></h4>
           <input type="submit" value="Submit" />
         </form>
         <div class="grid">
