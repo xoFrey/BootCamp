@@ -5,9 +5,9 @@ let carName = ["Audi", "Mercedes", "Seat", "Ford", "Porsche"];
 
 // ! splice()
 // Damit kann man gezielt sachen löschen und ersetzen
-// Erster Parameter: Wo soll hinzugefügt werden
-// Zweiter Parametr: Wieviele Elemente sollen gelöscht / überschrieben werden?
-// Dritter Parameter: Neues Element (optional)
+// :Erster Parameter: Wo soll hinzugefügt/entfernt werden
+// :Zweiter Parametr: Wieviele Elemente sollen gelöscht / überschrieben werden?
+// :Dritter Parameter: Neues Element (optional)
 
 // * Ab Index 2 zwei neue Werte hinzufügen
 carName.splice(2, 0, "VW", "Fiat");
