@@ -157,3 +157,7 @@ let nameFilter2 = filmTitel.filter((einzelneFilme) =>
 );
 
 console.table(nameFilter2);
+
+// # === LOOPS ===
+
+const names = ["Lisa", "Tobi", "Izel", "Mia", "Even", "Stefan", "Adrian"];
