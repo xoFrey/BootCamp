@@ -130,7 +130,6 @@ let filmTitel = [
   "The Social Network",
   "Interstellar",
 ];
-
 console.table(filmTitel);
 
 // * Alle Titel die länger als 20 Zeichen sind und speichern die in einer Variablen mit longMovies
@@ -159,5 +158,91 @@ let nameFilter2 = filmTitel.filter((einzelneFilme) =>
 console.table(nameFilter2);
 
 // # === LOOPS ===
+console.log("%c === LOOPS === ", "color:white; background:red");
 
 const names = ["Lisa", "Tobi", "Izel", "Mia", "Even", "Stefan", "Adrian"];
+
+console.log(names[0]);
+console.log(names[1]);
+console.log(names[2]);
+console.log(names[3]);
+
+// ! forEach
+
+names.forEach((name) => {
+  console.log(name);
+});
+
+names.forEach((name) => console.log(name));
+
+// *Bilder ins HTML
+
+let images = [
+  "https://picsum.photos/200",
+  "https://picsum.photos/201",
+  "https://picsum.photos/202",
+  "https://picsum.photos/203",
+  "https://picsum.photos/204",
+  "https://picsum.photos/205",
+  "https://picsum.photos/206",
+  "https://picsum.photos/207",
+  "https://picsum.photos/208",
+  "https://picsum.photos/209",
+];
+
+const imgBox = document.querySelector(".image-box");
+
+images.forEach((images, index) => {
+  // zeigt mir den Index von dem Element (immer an zweiter Stelle bei den Parametern)
+  console.log(index);
+  // Zeigt mir den Inhalt von array (Immer an erstger Stelle bei den Parametern )
+  console.log(images);
+});
+
+images.forEach((image) => (imgBox.innerHTML += `<img src="${image}">`));
+
+// ! map()
+// .map() geht durch jedes Element des Arrays und gibt ein neues Array zurück
+// .map() verändert das Ursprungsarray NICHT
+
+let number3 = [10, 4, 2, 22];
+console.log(number3);
+
+// Geht nicht weil der Ursprungsarray nicht verändert wird
+number3.map((zahl) => {
+  return zahl * 2;
+});
+
+// Muss man in einer Zwischenvariablen Speichern
+const doubleNumber3 = number3.map((zahl) => {
+  return zahl * 2;
+});
+
+console.log(doubleNumber3);
+
+// ! forEach() vs map()
+// forEach() - weniger Performance als map() -> erstellt kein neues Array
+// forEach() - wird für Daten benutzt, wie Bilder, ins HTML zu schreiben -> Wenn man die Werte später nicht mehr braucht
+// map() - erstellt ein neues Array und wird für berechnungen benutzt -> Man kann mit den neuen Werten dann weiter arbeiten
+
+let studentNames = ["Nina", "Max", "Susi"];
+
+// ? forEach() vs. map() beispiel
+console.log(studentNames.forEach((names) => names.toUpperCase())); // undefined weil forEach uns kein neues ARRAY zurückgibt
+console.log(studentNames.map((names) => names.toUpperCase())); // geht weil map uns ein Array zurückgibt
+
+console.log("Map ändert den Ursprungsarray nicht: ");
+console.log(studentNames);
+
+// ? Werte in eine neue Variable speichern
+
+const mapLowName = studentNames.map((names) => names.toLowerCase());
+console.log(mapLowName);
+// : -> Array wird ausgegeben mit lower Case
+
+const forEachLowName = studentNames.forEach((names) => names.toLowerCase());
+console.log(forEachLowName);
+// : -> undefined weil kein neues Array ausgegeben wird
+
+console.log(studentNames);
+// : -> Ursprungsarray unverändert
