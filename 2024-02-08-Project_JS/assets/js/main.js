@@ -1047,3 +1047,7 @@ const filterGenre = () => {
   });
   writeInHTML(filteredMovies);
 };
+
+function reloadPage() {
+  window.location.reload();
+}

@@ -1007,22 +1007,24 @@ const sortRate = () => {
 // *Filter funktion
 let filteredMovies = [];
 
-// const filterMovies = () => {
-//   let inputSearch = document.querySelector("#inputSearch").value;
-//   const error = document.querySelector(".error");
+const filterMovies = () => {
+  let inputSearch = document.querySelector("#inputSearch").value;
+  const error = document.querySelector(".error");
 
-//   let filter = movies.filter((item) => {
-//     return item.filter((element) => {
-//       if (element.includes(inputSearch) == true) {
-//         error.innerHTML = " ";
-//         return filteredMovies.push(item);
-//       } else if (filteredMovies.length === 0) {
-//         error.innerHTML = "Movie not found!";
-//       }
-//     });
-//   });
-//   writeInHTML(filteredMovies);
-// };
+  let filter = movies.filter((item) => {
+    return item.filter((element) => {
+      if (typeof element === "string") {
+        if (element.toLowerCase().includes(inputSearch.toLowerCase()) == true) {
+          error.innerHTML = " ";
+          return filteredMovies.push(item);
+        } else if (filteredMovies.length === 0) {
+          error.innerHTML = "Movie not found!";
+        }
+      }
+    });
+  });
+  writeInHTML(filteredMovies);
+};
 
 const filterGenre = () => {
   let inputSearch = document.querySelector("#inputSearch").value;
@@ -1037,7 +1039,7 @@ const filterGenre = () => {
             error.innerHTML = " ";
             return filteredMovies.push(list);
           } else if (filteredMovies.length === 0) {
-            error.innerHTML = "Genre not found!";
+            error.innerHTML = "Movie not found!";
           }
         });
       }
@@ -1045,3 +1047,7 @@ const filterGenre = () => {
   });
   writeInHTML(filteredMovies);
 };
+
+function reloadPage() {
+  window.location.reload();
+}
