@@ -1020,24 +1020,12 @@ const filterMovies = () => {
         } else if (filteredMovies.length === 0) {
           error.innerHTML = "Movie not found!";
         }
-      }
-    });
-  });
-  writeInHTML(filteredMovies);
-};
-
-const filterGenre = () => {
-  let inputSearch = document.querySelector("#inputSearch").value;
-  const error = document.querySelector(".error");
-
-  let filterGenre = movies.filter((list) => {
-    list.filter((item) => {
-      if (typeof item === "object") {
-        item.forEach((element) => {
-          element = element.toLowerCase();
-          if (element.includes(inputSearch.toLowerCase())) {
+      } else {
+        element.forEach((element1) => {
+          element1 = element1.toLowerCase();
+          if (element1.includes(inputSearch.toLowerCase())) {
             error.innerHTML = " ";
-            return filteredMovies.push(list);
+            return filteredMovies.push(item);
           } else if (filteredMovies.length === 0) {
             error.innerHTML = "Movie not found!";
           }
@@ -1047,6 +1035,28 @@ const filterGenre = () => {
   });
   writeInHTML(filteredMovies);
 };
+
+// const filterGenre = () => {
+//   let inputSearch = document.querySelector("#inputSearch").value;
+//   const error = document.querySelector(".error");
+
+//   let filterGenre = movies.filter((item) => {
+//     item.filter((element) => {
+//       if (typeof element === "object") {
+//         element.forEach((element1) => {
+//           element1 = element1.toLowerCase();
+//           if (element1.includes(inputSearch.toLowerCase())) {
+//             error.innerHTML = " ";
+//             return filteredMovies.push(item);
+//           } else if (filteredMovies.length === 0) {
+//             error.innerHTML = "Movie not found!";
+//           }
+//         });
+//       }
+//     });
+//   });
+//   writeInHTML(filteredMovies);
+// };
 
 function reloadPage() {
   window.location.reload();
