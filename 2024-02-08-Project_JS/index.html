@@ -12,13 +12,13 @@
       <h3>The best MovieDB</h3>
       <form>
         <div>
-          <input type="text" name="" id="input" />
-          <input type="button" value="Search" />
+          <input type="text" id="inputSearch" />
+          <input type="button" value="Search" onclick="filterMovies()" />
         </div>
         <div>
-          <input type="button" value="Year Up" />
-          <input type="button" value="Year Down" />
-          <input type="button" value="Best Rate" />
+          <input type="button" value="Year Up" onclick="sortYearUp()" />
+          <input type="button" value="Year Down" onclick="sortYearDown()" />
+          <input type="button" value="Best Rate" onclick="sortRate()" />
         </div>
       </form>
       <section class="movie-box"></section>

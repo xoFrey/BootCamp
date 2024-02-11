@@ -945,16 +945,77 @@ const movies = [
   ],
 ];
 
-const movieBox = document.querySelector(".movie-box"); // Section
+// ? To-Do List:
+// Arrays ins HTML schreiben
+// - SORT
+// Arrays sortieren nach Alphabet (Titel)
+// Arrays nach Year Up , Year Down, Best Rate sortieren
+// - FILTER
+// Nur die Arrays anzeigen, die in die Suchfunktion eingegeben werden (onchange, onsubmit)
 
-const movieItems = movies.map((item) => {
-  const newMovieItems = item.map((element) => `<p> ${element} </p>`);
-  console.log(newMovieItems);
+const movieBox = document.querySelector(".movie-box");
+let moviesNew = [];
+let param = [];
 
-  let myDiv = `<div class="grid-box">`;
-  newMovieItems.forEach((item2) => {
-    myDiv += item2;
+// * Arrays in HTML - function
+const writeInHTML = (param) => {
+  moviesNew = param
+    .map((item) => {
+      return `<div class="grid-box">${item
+        .map((subItem) => `<p>${subItem}</p>`)
+        .join("")}</div>`;
+    })
+    .join("");
+  movieBox.innerHTML = moviesNew;
+};
+
+// *nach alphabet sortieren!
+
+const sortMovies = () => {
+  movies.sort((a, b) => {
+    return a[0] > b[0] ? 1 : -1;
   });
-  myDiv += `</div>`;
-  movieBox.innerHTML += myDiv;
-});
+  writeInHTML(movies);
+};
+sortMovies();
+
+// *nach Year Up sortieren
+
+const sortYearUp = () => {
+  movies.sort((a, b) => {
+    return a[1] > b[1] ? 1 : -1;
+  });
+  writeInHTML(movies);
+};
+// *nach Year Up sortieren
+const sortYearDown = () => {
+  movies.sort((a, b) => {
+    return a[1] < b[1] ? 1 : -1;
+  });
+  writeInHTML(movies);
+};
+
+// *best rate sortieren
+
+const sortRate = () => {
+  movies.sort((a, b) => {
+    return a[5] < b[5] ? 1 : -1;
+  });
+  writeInHTML(movies);
+};
+
+// *Filter funktion
+let filteredMovies = [];
+
+const filterMovies = () => {
+  const inputSearch = document.querySelector("#inputSearch").value;
+
+  let filter = movies.filter((item) => {
+    return item.forEach((element) => {
+      if (element.includes(inputSearch) == true) {
+        return filteredMovies.push(item);
+      }
+    });
+  });
+  writeInHTML(filteredMovies);
+};

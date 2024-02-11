@@ -36,6 +36,9 @@ main {
   margin-bottom: 10px;
   font-size: 20px;
 }
+.grid-box p:nth-of-type(3) {
+  font-weight: 800;
+}
 
 .grid-box P:nth-of-type(5) {
   word-break: break-word;
@@ -50,4 +53,12 @@ h3 {
 
 input {
   margin-bottom: 20px;
+}
+
+input[type="button"] {
+  padding: 5px 10px;
+}
+
+input[type="text"] {
+  height: 28px;
 }
