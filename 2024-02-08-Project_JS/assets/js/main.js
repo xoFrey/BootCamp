@@ -1008,16 +1008,16 @@ const sortRate = () => {
 let filteredMovies = [];
 
 const filterMovies = () => {
-  const inputSearch = document.querySelector("#inputSearch").value;
+  let inputSearch = document.querySelector("#inputSearch").value;
   const error = document.querySelector(".error");
 
   let filter = movies.filter((item) => {
-    return item.forEach((element) => {
-      if (element.includes(inputSearch.toLowerCase()) == true) {
+    return item.filter((element) => {
+      if (element.includes(inputSearch) == true) {
+        error.innerHTML = " ";
         return filteredMovies.push(item);
-      } else {
-        movieBox.innerHTML = "";
-        error.textContent = "Movie not found!";
+      } else if (filteredMovies.length === 0) {
+        error.innerHTML = "Movie not found!";
       }
     });
   });
