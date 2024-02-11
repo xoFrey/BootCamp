@@ -59,7 +59,8 @@ input {
   margin-bottom: 20px;
 }
 
-input[type="button"] {
+input[type="button"],
+input[type="submit"] {
   padding: 5px 10px;
 }
 

@@ -10,15 +10,15 @@
     <main>
       <h1>Movies for You</h1>
       <h3>The best MovieDB</h3>
-      <form>
+      <form onsubmit="filterMovies(event)">
         <div>
-          <input type="text" id="inputSearch" />
-          <input type="button" value="Search" onclick="filterMovies()" />
+          <input type="text" id="inputSearch" required />
+          <input type="submit" value="Search" onclick="" />
           <input type="button" value="Reset" onclick="reloadPage()" />
         </div>
         <div>
-          <input type="button" value="Year Up" onclick="sortYearUp()" />
-          <input type="button" value="Year Down" onclick="sortYearDown()" />
+          <input type="button" value="Year Up" onclick="sortYear()" />
+          <input type="button" value="Year Down" onclick="sortYear('desc')" />
           <input type="button" value="Best Rate" onclick="sortRate()" />
         </div>
       </form>

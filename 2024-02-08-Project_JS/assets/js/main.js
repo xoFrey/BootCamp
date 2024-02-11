@@ -979,19 +979,21 @@ const sortMovies = () => {
 };
 sortMovies();
 
-// *nach Year Up sortieren
+// *nach Year sortieren
 
-const sortYearUp = () => {
-  movies.sort((a, b) => {
-    return a[1] > b[1] ? 1 : -1;
-  });
-  writeInHTML(movies);
-};
-// *nach Year Up sortieren
-const sortYearDown = () => {
-  movies.sort((a, b) => {
-    return a[1] < b[1] ? 1 : -1;
-  });
+const sortYear = (sortDirection) => {
+  switch (sortDirection) {
+    case "desc":
+      movies.sort((a, b) => {
+        return a[1] < b[1] ? 1 : -1;
+      });
+      break;
+    default:
+      movies.sort((a, b) => {
+        return a[1] > b[1] ? 1 : -1;
+      });
+      break;
+  }
   writeInHTML(movies);
 };
 
@@ -1007,11 +1009,14 @@ const sortRate = () => {
 // *Filter funktion
 let filteredMovies = [];
 
-const filterMovies = () => {
+const filterMovies = (event) => {
+  event.preventDefault();
   let inputSearch = document.querySelector("#inputSearch").value;
   const error = document.querySelector(".error");
 
-  let filter = movies.filter((item) => {
+  filteredMovies.length = 0;
+
+  movies.forEach((item) => {
     return item.filter((element) => {
       if (typeof element === "string") {
         if (element.toLowerCase().includes(inputSearch.toLowerCase()) == true) {
