@@ -13,7 +13,11 @@
       <form>
         <div>
           <input type="text" id="inputSearch" />
-          <input type="button" value="Search" onclick="filterMovies()" />
+          <input
+            type="button"
+            value="Search"
+            onclick="filterMovies(), filterGenre()"
+          />
         </div>
         <div>
           <input type="button" value="Year Up" onclick="sortYearUp()" />

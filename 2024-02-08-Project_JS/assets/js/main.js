@@ -1013,11 +1013,35 @@ const filterMovies = () => {
 
   let filter = movies.filter((item) => {
     return item.filter((element) => {
-      if (element.includes(inputSearch) == true) {
-        error.innerHTML = " ";
-        return filteredMovies.push(item);
-      } else if (filteredMovies.length === 0) {
-        error.innerHTML = "Movie not found!";
+      if (typeof element === "string") {
+        if (element.toLowerCase().includes(inputSearch.toLowerCase()) == true) {
+          error.innerHTML = " ";
+          return filteredMovies.push(item);
+        } else if (filteredMovies.length === 0) {
+          error.innerHTML = "Movie not found!";
+        }
+      }
+    });
+  });
+  writeInHTML(filteredMovies);
+};
+
+const filterGenre = () => {
+  let inputSearch = document.querySelector("#inputSearch").value;
+  const error = document.querySelector(".error");
+
+  let filterGenre = movies.filter((list) => {
+    list.filter((item) => {
+      if (typeof item === "object") {
+        item.forEach((element) => {
+          element = element.toLowerCase();
+          if (element.includes(inputSearch.toLowerCase())) {
+            error.innerHTML = " ";
+            return filteredMovies.push(list);
+          } else if (filteredMovies.length === 0) {
+            error.innerHTML = "Movie not found!";
+          }
+        });
       }
     });
   });
