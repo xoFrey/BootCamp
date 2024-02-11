@@ -1009,11 +1009,15 @@ let filteredMovies = [];
 
 const filterMovies = () => {
   const inputSearch = document.querySelector("#inputSearch").value;
+  const error = document.querySelector(".error");
 
   let filter = movies.filter((item) => {
     return item.forEach((element) => {
-      if (element.includes(inputSearch) == true) {
+      if (element.includes(inputSearch.toLowerCase()) == true) {
         return filteredMovies.push(item);
+      } else {
+        movieBox.innerHTML = "";
+        error.textContent = "Movie not found!";
       }
     });
   });

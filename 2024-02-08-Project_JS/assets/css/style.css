@@ -47,6 +47,10 @@ main {
 h1 {
   padding: 1.5vw;
 }
+
+h2 {
+  color: red;
+}
 h3 {
   margin-bottom: 20px;
 }
