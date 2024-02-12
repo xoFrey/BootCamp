@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+}
+
+.scissors {
+  width: 250px;
+  height: 250px;
+}
+.scissors:hover {
+  width: 400px;
+  height: 400px;
+  transition: 1s;
+}
+
+.rock:hover,
+.paper:hover {
+  width: 450px;
+  height: 450px;
+  transition: 1s;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(255, 232, 236);
+}
+
+h1 {
+  margin-bottom: 10vh;
+  padding-top: 20px;
+  font-size: 50px;
+}
+
+p {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+div {
+  margin-bottom: 2vh;
+}
+main article {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}

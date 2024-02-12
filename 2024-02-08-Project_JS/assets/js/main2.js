@@ -945,103 +945,34 @@ const movies = [
   ],
 ];
 
-// ? To-Do List:
-// Arrays ins HTML schreiben
-// - SORT
-// Arrays sortieren nach Alphabet (Titel)
-// Arrays nach Year Up , Year Down, Best Rate sortieren
-// - FILTER
-// Nur die Arrays anzeigen, die in die Suchfunktion eingegeben werden (onchange, onsubmit)
+// [
+//   [
+//     "The Shawshank Redemption",
+//     "1994",
+//     "Frank Darabont",
+//     "2h 22min",
+//     ["Crime", "Drama"],
+//     "9.3",
+//   ],
+//   [
+//     "The Godfather",
+//     "1972",
+//     "Francis Ford Coppola",
+//     "2h 55min",
+//     ["Crime", "Drama"],
+//     "9.2",
+//   ]
+// ]
 
 const movieBox = document.querySelector(".movie-box");
-let moviesNew = [];
-let param = [];
 
-// * Arrays in HTML - function
-const writeInHTML = (param) => {
-  moviesNew = param
-    .map((item) => {
-      return `<div class="grid-box">${item
-        .map((subItem) => `<p>${subItem}</p>`)
-        .join("")}</div>`;
-    })
-    .join("");
-  movieBox.innerHTML = moviesNew;
-};
-
-// *nach alphabet sortieren!
-
-const sortMovies = () => {
-  movies.sort((a, b) => {
-    return a[0] > b[0] ? 1 : -1;
-  });
-  writeInHTML(movies);
-};
-sortMovies();
-
-// *nach Year sortieren
-
-const sortYear = (sortDirection) => {
-  switch (sortDirection) {
-    case "desc":
-      movies.sort((a, b) => {
-        return a[1] < b[1] ? 1 : -1;
-      });
-      break;
-    default:
-      movies.sort((a, b) => {
-        return a[1] > b[1] ? 1 : -1;
-      });
-      break;
-  }
-  writeInHTML(movies);
-};
-
-// *best rate sortieren
-
-const sortRate = () => {
-  movies.sort((a, b) => {
-    return a[5] < b[5] ? 1 : -1;
-  });
-  writeInHTML(movies);
-};
-
-// *Filter funktion
-let filteredMovies = [];
-
-const filterMovies = (event) => {
-  event.preventDefault();
-
-  let inputSearch = document.querySelector("#inputSearch").value;
-  const error = document.querySelector(".error");
-
-  filteredMovies.length = 0;
-
-  movies.forEach((item) => {
-    return item.filter((element) => {
-      if (typeof element === "string") {
-        if (element.toLowerCase().includes(inputSearch.toLowerCase()) == true) {
-          error.innerHTML = " ";
-          return filteredMovies.push(item);
-        } else if (filteredMovies.length === 0) {
-          error.innerHTML = "Movie not found!";
-        }
-      } else {
-        element.forEach((element1) => {
-          element1 = element1.toLowerCase();
-          if (element1.includes(inputSearch.toLowerCase())) {
-            error.innerHTML = " ";
-            return filteredMovies.push(item);
-          } else if (filteredMovies.length === 0) {
-            error.innerHTML = "Movie not found!";
-          }
-        });
-      }
-    });
-  });
-  writeInHTML(filteredMovies);
-};
-
-function reloadPage() {
-  window.location.reload();
-}
+const meinArray = movies
+  .map((liste) => {
+    return `<div> ${liste
+      .map((item) => {
+        return `<p> ${item}<p>`;
+      })
+      .join("")} </div>`;
+  })
+  .join("");
+movieBox.innerHTML += meinArray;
