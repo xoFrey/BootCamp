@@ -16,15 +16,15 @@ img {
   height: 250px;
 }
 .scissors:hover {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   transition: 1s;
 }
 
 .rock:hover,
 .paper:hover {
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   transition: 1s;
 }
 
