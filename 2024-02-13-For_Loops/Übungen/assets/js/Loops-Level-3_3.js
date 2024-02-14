@@ -3,8 +3,6 @@ const loopMe = () => {
   const output = document.querySelector(".output");
   let myArray = [];
   if (input == 0) {
-    console.log("hofuvhndouvj");
-
     output.innerHTML = `<p style="color:red"> Bitte Zahl über 0 eingeben! <p>`;
   } else {
     if (input % 2 === 0) {
