@@ -959,13 +959,9 @@ let param = [];
 
 // * Arrays in HTML - function
 const writeInHTML = (param) => {
-  moviesNew = param
-    .map((item) => {
-      return `<div class="grid-box">${item
-        .map((subItem) => `<p>${subItem}</p>`)
-        .join("")}</div>`;
-    })
-    .join("");
+  moviesNew = param.map((item) => {
+         return `<div class="grid-box">${item.map((subItem) => `<p>${subItem}</p>`).join("")}</div>`;
+    }).join("");
   movieBox.innerHTML = moviesNew;
 };
 
