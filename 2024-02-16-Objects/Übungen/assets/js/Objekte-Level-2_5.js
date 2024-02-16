@@ -1,4 +1,3 @@
-const table = document.querySelector(".table");
 const singers = [
   {
     name: "The Beatles",
@@ -49,18 +48,43 @@ const singers = [
     genre: "Progressive rock / Psychedelic rock",
   },
 ];
-// {
-//     name: "The Beatles",
-//     country: "United Kingdom",
-//     period_active: { start: 1960, end: 1970 },
-//     genre: "Rock / Pop",
-//   },
+const table = document.querySelector(".table");
 
-singers.forEach((singer) => {
-  table.innerHTML += `
+const inputName = document.querySelector(".inputName");
+const error = document.querySelector(".error");
+
+const writeInHTML = (objects) => {
+  table.innerHTML = `<div><h3>Name</h3></div>
+  <div><h3>Country</h3></div>
+  <div><h3>Period Active</h3></div>
+  <div><h3>Genre</h3></div>`;
+  objects.forEach((singer) => {
+    table.innerHTML += `
     <div><p>${singer.name}</p></div>
     <div><p>${singer.country}</p></div>
     <div><p>${singer.period_active.start} - ${singer.period_active.end}</p></div>   
     <div><p>${singer.genre}</p></div>
      `;
-});
+  });
+};
+
+writeInHTML(singers);
+
+const search = () => {
+  const filteredItem = singers.filter((item) => {
+    if (item.name.includes(inputName.value)) {
+      return item;
+    } else {
+      error.textContent = "Artist not found";
+      console.log("not found");
+    }
+  });
+  table.innerHTML = " ";
+  writeInHTML(filteredItem);
+};
+{
+  {
+    {
+    }
+  }
+}

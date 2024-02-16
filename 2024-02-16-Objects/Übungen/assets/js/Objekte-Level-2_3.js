@@ -1,4 +1,5 @@
 const table = document.querySelector(".table");
+
 const singers = [
   {
     name: "The Beatles",
