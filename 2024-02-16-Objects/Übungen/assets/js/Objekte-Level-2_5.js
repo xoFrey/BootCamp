@@ -82,9 +82,3 @@ const search = () => {
   table.innerHTML = " ";
   writeInHTML(filteredItem);
 };
-{
-  {
-    {
-    }
-  }
-}
