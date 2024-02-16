@@ -49,22 +49,22 @@ const singers = [
   },
 ];
 const table = document.querySelector(".table");
-
 const inputName = document.querySelector(".inputName");
-const error = document.querySelector(".error");
 
 const writeInHTML = (objects) => {
-  table.innerHTML = `<div><h3>Name</h3></div>
-  <div><h3>Country</h3></div>
-  <div><h3>Period Active</h3></div>
-  <div><h3>Genre</h3></div>`;
+  objects.length <= 0
+    ? (table.innerHTML = `  <h4 class="error">Artist not found</h4>`)
+    : (table.innerHTML = `<div><h3>Name</h3></div>
+    <div><h3>Country</h3></div>
+    <div><h3>Period Active</h3></div>
+    <div><h3>Genre</h3></div>`);
   objects.forEach((singer) => {
     table.innerHTML += `
-    <div><p>${singer.name}</p></div>
-    <div><p>${singer.country}</p></div>
-    <div><p>${singer.period_active.start} - ${singer.period_active.end}</p></div>   
-    <div><p>${singer.genre}</p></div>
-     `;
+      <div><p>${singer.name}</p></div>
+      <div><p>${singer.country}</p></div>
+      <div><p>${singer.period_active.start} - ${singer.period_active.end}</p></div>
+      <div><p>${singer.genre}</p></div>
+       `;
   });
 };
 
@@ -72,13 +72,8 @@ writeInHTML(singers);
 
 const search = () => {
   const filteredItem = singers.filter((item) => {
-    if (item.name.includes(inputName.value)) {
-      return item;
-    } else {
-      error.textContent = "Artist not found";
-      console.log("not found");
-    }
+    return item.name.toLowerCase().includes(inputName.value.toLowerCase());
   });
-  table.innerHTML = " ";
+
   writeInHTML(filteredItem);
 };
