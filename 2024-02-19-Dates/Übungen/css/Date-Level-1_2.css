@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.date {
+  display: flex;
+  gap: 20px;
+  border: 1px solid white;
+  border-radius: 30px;
+  height: 150px;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+
+.description {
+  font-size: 10px;
+}
+
+.clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
