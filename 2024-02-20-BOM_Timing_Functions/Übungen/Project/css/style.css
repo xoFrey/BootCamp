@@ -1,0 +1,19 @@
+@import url(//db.onlinewebfonts.com/c/f05f148ec6596f0b75375fa566aaf1fe?family=Bely);
+
+@font-face {
+  font-family: Cousine;
+  src: url(../assets/fonts/Cousine/Cousine-Regular.ttf);
+}
+@font-face {
+  font-family: Didact;
+  src: url(../assets/fonts/Didact_Gothic/DidactGothic-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+h1 {
+  font-family: Didact;
+  color: red;
+}
