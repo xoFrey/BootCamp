@@ -9,40 +9,21 @@
   <body id="main">
     <header>
       <button>Home</button>
-      <input
-        type="text"
-        id="inputCity"
-        placeholder="Search for city"
-        onchange="weatherData()"
-      />
-      <button>Reload</button>
+      <input type="text" id="inputCity" placeholder="Search for city" />
+      <input type="button" value="Reload" onclick="weatherData()" />
     </header>
     <main>
-      <section class="city-info">
-        <p class="city-name">City Name</p>
-        <h4>Weather Description</h4>
-        <img alt="IMAGE Icon from weather" />
-        <h2>temperature</h2>
-      </section>
-      <div class="datetime">
-        <p>date</p>
-        <p>time</p>
-      </div>
+      <section class="city-info"></section>
+      <div class="date-time"></div>
       <article class="info-box">
-        <div>
-          <p>Icon</p>
-          <p>percentage</p>
-          <p>Precipitation</p>
+        <div class="cloudiness">
+          <img src="./assets/img/justcloudy.svg" alt="cloud" />
         </div>
-        <div>
-          <p>Icon</p>
-          <p>percentage</p>
-          <p>Precipitation</p>
+        <div class="humidity">
+          <img src="./assets/img/drips.svg" alt="drops" />
         </div>
-        <div>
-          <p>Icon</p>
-          <p>percentage</p>
-          <p>Precipitation</p>
+        <div class="windspeed">
+          <img src="./assets/img/windspeeeeeeed.svg" alt="wind" />
         </div>
       </article>
       <div class="todayforecast">
@@ -80,6 +61,7 @@
           <p>icon</p>
           <p>temp</p>
         </div>
+        <img src="./assets/img/Sun-overheating.svg" alt="" />
       </article>
     </main>
     <script src="./assets/js/main.js"></script>
