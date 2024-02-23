@@ -231,146 +231,121 @@ const currentWeather = (lat, lon, name) => {
           }
 
           cityInfo.appendChild(temperature);
-        });
 
-      // ! ==== Info - Box ====
+          // ! ==== Info - Box ====
 
-      // : Cloudiness
-      cloudsPercentage.textContent = weatherData.clouds.all + "%";
-      clouds.textContent = "Cloudiness";
-      cloudiness.appendChild(cloudsPercentage);
-      cloudiness.appendChild(clouds);
+          // : Cloudiness
+          cloudsPercentage.textContent = weatherData.clouds.all + "%";
+          clouds.textContent = "Cloudiness";
+          cloudiness.appendChild(cloudsPercentage);
+          cloudiness.appendChild(clouds);
 
-      // : Humidity
+          // : Humidity
 
-      humidPercentage.textContent = weatherData.main.humidity + "%";
-      humid.textContent = "Humidity";
-      humidity.appendChild(humidPercentage);
-      humidity.appendChild(humid);
+          humidPercentage.textContent = weatherData.main.humidity + "%";
+          humid.textContent = "Humidity";
+          humidity.appendChild(humidPercentage);
+          humidity.appendChild(humid);
 
-      // : Windspeed
+          // : Windspeed
 
-      windMS.textContent = weatherData.wind.speed + " m/s";
-      wind.textContent = "Wind Speed";
-      windSpeed.appendChild(windMS);
-      windSpeed.appendChild(wind);
+          windMS.textContent = weatherData.wind.speed + " m/s";
+          wind.textContent = "Wind Speed";
+          windSpeed.appendChild(windMS);
+          windSpeed.appendChild(wind);
 
-      // ! ==== INSERT FORECAST ====
-      fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=13b6943af84bbae5e56e1975752bc696
+          // ! ==== INSERT FORECAST ====
+          fetch(
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=13b6943af84bbae5e56e1975752bc696
         `
-      )
-        .then((res) => res.json())
-        .then((castData) => {
-          console.log(castData.list);
+          )
+            .then((res) => res.json())
+            .then((castData) => {
+              console.log(castData.list);
 
-          // : Weekdays
-          let one = castData.list[7].dt * 1000;
-          let firstDay = new Date(one);
+              let localDay = localDate.getDate();
+              let localMonth = localDate.getMonth() + 1;
+              let localYear = localDate.getFullYear();
+              let localString = `${localDay}-${localMonth}-${localYear}`;
+              // # -----------------------------------------
+              // forecastDiv.remove();
 
-          weekdayOne.textContent = firstDay.toLocaleString("default", {
-            weekday: "short",
-          });
-          dayOne.appendChild(weekdayOne);
+              // if cast == 12 -> anstatt elemente IM dings neu erstellen, lieber außerhalb global, wenn true in HTML appenden und beim zweiten mal statt appenden - textcontent ändern / deleten
+              //  createElement nicht in IF !!!!!!!!!!!
+              //  Maybe klassen doch in HTML?!??!?!!?!?
+              // # ----------------------------------------
 
-          let two = castData.list[15].dt * 1000;
-          let secondDay = new Date(two);
+              castData.list.forEach((item) => {
+                console.log(item);
 
-          weekdayTwo.textContent = secondDay.toLocaleString("default", {
-            weekday: "short",
-          });
+                let castDate = new Date(item.dt * 1000);
+                let castDay = castDate.getDate();
+                let castMonth = castDate.getMonth() + 1;
+                let castYear = castDate.getFullYear();
+                let castTime = castDate.getHours() - 1;
+                let castString = `${castDate}-${castMonth}-${castYear}`;
+                // let forecastDiv = document.createElement("div");
+                if (!castString.includes(localString)) {
+                  if (castTime === 12) {
+                    let forecastDiv = document.createElement("div");
+                    let iconPos = document.createElement("img");
+                    iconPos.setAttribute("class", "forecastIcon");
+                    let castTemp = document.createElement("p");
+                    let castDayP = document.createElement("p");
+                    castTemp.textContent = item.main.temp;
+                    castDayP.textContent = castDate.toLocaleString("default", {
+                      weekday: "short",
+                    });
 
-          dayTwo.appendChild(weekdayTwo);
+                    forecastDiv.appendChild(castDayP);
 
-          let three = castData.list[23].dt * 1000;
-          let thirdDay = new Date(three);
+                    weatherIcons(
+                      item.weather[0].main,
+                      iconPos,
+                      forecastDiv,
+                      item.main.temp
+                    );
+                    forecastDiv.appendChild(castTemp);
+                    forecast.appendChild(forecastDiv);
+                    console.log("yay");
+                  }
+                }
+              });
 
-          weekdayThree.textContent = thirdDay.toLocaleString("default", {
-            weekday: "short",
-          });
-
-          dayThree.appendChild(weekdayThree);
-
-          let four = castData.list[31].dt * 1000;
-          let fourthDay = new Date(four);
-
-          weekdayFour.textContent = fourthDay.toLocaleString("default", {
-            weekday: "short",
-          });
-
-          dayFour.appendChild(weekdayFour);
-
-          let five = castData.list[39].dt * 1000;
-          let fifthDay = new Date(five);
-
-          weekdayFive.textContent = fifthDay.toLocaleString("default", {
-            weekday: "short",
-          });
-
-          dayFive.appendChild(weekdayFive);
-
-          // # INSERT ICON
-          weatherIcons(
-            castData.list[7].weather[0].main,
-            weekIconOne,
-            dayOne,
-            castData.list[7].main.temp
-          );
-          weatherIcons(
-            castData.list[15].weather[0].main,
-            weekIconTwo,
-            dayTwo,
-            castData.list[15].main.temp
-          );
-          weatherIcons(
-            castData.list[23].weather[0].main,
-            weekIconThree,
-            dayThree,
-            castData.list[23].main.temp
-          );
-          weatherIcons(
-            castData.list[31].weather[0].main,
-            weekIconFour,
-            dayFour,
-            castData.list[31].main.temp
-          );
-          weatherIcons(
-            castData.list[39].weather[0].main,
-            weekIconFive,
-            dayFive,
-            castData.list[39].main.temp
-          );
-
-          // : Temperatur
-          weekTempOne.textContent =
-            Math.round(castData.list[7].main.temp) + "°";
-
-          dayOne.appendChild(weekTempOne);
-
-          weekTempTwo.textContent =
-            Math.round(castData.list[15].main.temp) + "°";
-
-          dayTwo.appendChild(weekTempTwo);
-
-          weekTempThree.textContent =
-            Math.round(castData.list[23].main.temp) + "°";
-
-          dayThree.appendChild(weekTempThree);
-
-          weekTempFour.textContent =
-            Math.round(castData.list[31].main.temp) + "°";
-
-          dayFour.appendChild(weekTempFour);
-
-          weekTempFive.textContent =
-            Math.round(castData.list[39].main.temp) + "°";
-
-          dayFive.appendChild(weekTempFive);
-
-          // --------------------------------------------------
-          console.log(Math.round(castData.list[2].main.temp));
-        })
-        .catch((err) => console.log("problem mit forecast", err));
+              // # INSERT ICON
+              // weatherIcons(
+              //   castData.list[7].weather[0].main,
+              //   weekIconOne,
+              //   dayOne,
+              //   castData.list[7].main.temp
+              // );
+              // weatherIcons(
+              //   castData.list[15].weather[0].main,
+              //   weekIconTwo,
+              //   dayTwo,
+              //   castData.list[15].main.temp
+              // );
+              // weatherIcons(
+              //   castData.list[23].weather[0].main,
+              //   weekIconThree,
+              //   dayThree,
+              //   castData.list[23].main.temp
+              // );
+              // weatherIcons(
+              //   castData.list[31].weather[0].main,
+              //   weekIconFour,
+              //   dayFour,
+              //   castData.list[31].main.temp
+              // );
+              // weatherIcons(
+              //   castData.list[39].weather[0].main,
+              //   weekIconFive,
+              //   dayFive,
+              //   castData.list[39].main.temp
+              // );
+            })
+            .catch((err) => console.log("problem mit forecast", err));
+        });
     })
     .catch((error) => console.log("Current Weather API Error", error));
 };
