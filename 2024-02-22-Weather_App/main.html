@@ -8,7 +8,7 @@
   </head>
   <body id="main">
     <header>
-      <button>Home</button>
+      <input type="button" value="Home" onclick="myPosition()" />
       <input type="text" id="inputCity" placeholder="Search for city" />
       <input type="button" value="Reload" onclick="weatherData()" />
     </header>
@@ -26,43 +26,18 @@
           <img src="./assets/img/windspeeeeeeed.svg" alt="wind" />
         </div>
       </article>
-      <div class="todayforecast">
-        <p>today</p>
-        <p>5 day forcast</p>
+      <div class="forecast">
+        <div>
+          <p>5 day forcast</p>
+        </div>
+        <article class="forecast-grid">
+          <div class="d-one"></div>
+          <div class="d-two"></div>
+          <div class="d-three"></div>
+          <div class="d-four"></div>
+          <div class="d-five"></div>
+        </article>
       </div>
-      <article class="forecast-grid">
-        <div>
-          <p>time</p>
-          <p>icon</p>
-          <p>temp</p>
-        </div>
-        <div>
-          <p>time</p>
-          <p>icon</p>
-          <p>temp</p>
-        </div>
-        <div>
-          <p>time</p>
-          <p>icon</p>
-          <p>temp</p>
-        </div>
-        <div>
-          <p>time</p>
-          <p>icon</p>
-          <p>temp</p>
-        </div>
-        <div>
-          <p>time</p>
-          <p>icon</p>
-          <p>temp</p>
-        </div>
-        <div>
-          <p>time</p>
-          <p>icon</p>
-          <p>temp</p>
-        </div>
-        <img src="./assets/img/Sun-overheating.svg" alt="" />
-      </article>
     </main>
     <script src="./assets/js/main.js"></script>
   </body>
