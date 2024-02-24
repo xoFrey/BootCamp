@@ -36,3 +36,15 @@ fetch(
       }
     });
   });
+  i++;
+  castTemp.textContent = item.main.temp;
+  castDayP.textContent = castDate.toLocaleString("default", {
+    weekday: "short",
+  });
+
+  weatherIcons(
+    item.weather[0].main,
+    iconPos,
+    forecastDiv1,
+    item.main.temp
+  );

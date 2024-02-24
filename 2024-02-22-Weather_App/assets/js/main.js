@@ -1,5 +1,8 @@
 const city_name = document.querySelector("#inputCity");
 
+// Day Night Style
+const color = document.querySelector(".night");
+
 // Outputs - Classes
 const cityInfo = document.querySelector(".city-info");
 const dateTime = document.querySelector(".date-time");
@@ -16,8 +19,9 @@ const dayFour = document.querySelector(".d-four");
 const dayFive = document.querySelector(".d-five");
 
 // Output - Infos
-let cityName = document.createElement("p");
-let description = document.createElement("h4");
+let cityName = document.createElement("h4");
+let description = document.createElement("p");
+description.setAttribute("class", "description");
 let weatherIcon = document.createElement("img");
 let temperature = document.createElement("h2");
 let date = document.createElement("p");
@@ -30,30 +34,6 @@ let windMS = document.createElement("p");
 let wind = document.createElement("p");
 
 // Forecast p
-let weekdayOne = document.createElement("p");
-let weekIconOne = document.createElement("img");
-weekIconOne.setAttribute("class", "forecastIcon");
-let weekTempOne = document.createElement("p");
-
-let weekdayTwo = document.createElement("p");
-let weekIconTwo = document.createElement("img");
-weekIconTwo.setAttribute("class", "forecastIcon");
-let weekTempTwo = document.createElement("p");
-
-let weekdayThree = document.createElement("p");
-let weekIconThree = document.createElement("img");
-weekIconThree.setAttribute("class", "forecastIcon");
-let weekTempThree = document.createElement("p");
-
-let weekdayFour = document.createElement("p");
-let weekIconFour = document.createElement("img");
-weekIconFour.setAttribute("class", "forecastIcon");
-let weekTempFour = document.createElement("p");
-
-let weekdayFive = document.createElement("p");
-let weekIconFive = document.createElement("img");
-weekIconFive.setAttribute("class", "forecastIcon");
-let weekTempFive = document.createElement("p");
 
 const weatherData = () => {
   fetch(
@@ -126,6 +106,7 @@ const myWeatherData = (lat, lon) => {
 };
 const myPosition = () => {
   navigator.geolocation.getCurrentPosition((position) => {
+    city_name.value = "";
     let myPositionLat = position.coords.latitude;
     let myPositionLon = position.coords.longitude;
     myWeatherData(myPositionLat, myPositionLon);
@@ -197,10 +178,29 @@ const currentWeather = (lat, lon, name) => {
           getHoursSunset = sunsetLocal.getHours() - 1;
           getHoursSunrise = sunriseLocal.getHours() - 1;
           getHoursLocal = localDate.getHours();
+          console.log("LOCAL, SUNRISE, SUNSET");
+
+          console.log(getHoursLocal);
+          console.log(getHoursSunrise);
+          console.log(getHoursSunset);
+
+          if (
+            getHoursLocal >= getHoursSunset ||
+            getHoursLocal <= getHoursSunrise
+          ) {
+            color.classList.remove("day");
+            color.classList.add("night");
+          } else {
+            color.classList.remove("night");
+            color.classList.add("day");
+          }
 
           switch (weatherStatus) {
             case "Clear":
-              if (getHoursLocal >= getHoursSunset) {
+              if (
+                getHoursLocal >= getHoursSunset ||
+                getHoursLocal <= getHoursSunrise
+              ) {
                 weatherIcon.setAttribute("src", "./assets/img/Moon.svg");
                 cityInfo.appendChild(weatherIcon);
               } else {
@@ -214,7 +214,10 @@ const currentWeather = (lat, lon, name) => {
               }
               break;
             case "Clouds":
-              if (getHoursLocal >= getHoursSunset) {
+              if (
+                getHoursLocal >= getHoursSunset ||
+                getHoursLocal <= getHoursSunrise
+              ) {
                 weatherIcon.setAttribute(
                   "src",
                   "./assets/img/moon-with-cloud.svg"
@@ -223,7 +226,7 @@ const currentWeather = (lat, lon, name) => {
               } else {
                 weatherIcon.setAttribute(
                   "src",
-                  "./assets/img/sun-with-cloud.svg"
+                  "./assets/img/blacksuncloud.svg"
                 );
                 cityInfo.appendChild(weatherIcon);
               }
@@ -267,14 +270,8 @@ const currentWeather = (lat, lon, name) => {
               let localMonth = localDate.getMonth() + 1;
               let localYear = localDate.getFullYear();
               let localString = `${localDay}-${localMonth}-${localYear}`;
-              // # -----------------------------------------
-              // forecastDiv.remove();
-
-              // if cast == 12 -> anstatt elemente IM dings neu erstellen, lieber außerhalb global, wenn true in HTML appenden und beim zweiten mal statt appenden - textcontent ändern / deleten
-              //  createElement nicht in IF !!!!!!!!!!!
-              //  Maybe klassen doch in HTML?!??!?!!?!?
+              forecast.innerHTML = "";
               // # ----------------------------------------
-
               castData.list.forEach((item) => {
                 console.log(item);
 
@@ -284,7 +281,7 @@ const currentWeather = (lat, lon, name) => {
                 let castYear = castDate.getFullYear();
                 let castTime = castDate.getHours() - 1;
                 let castString = `${castDate}-${castMonth}-${castYear}`;
-                // let forecastDiv = document.createElement("div");
+
                 if (!castString.includes(localString)) {
                   if (castTime === 12) {
                     let forecastDiv = document.createElement("div");
@@ -292,7 +289,7 @@ const currentWeather = (lat, lon, name) => {
                     iconPos.setAttribute("class", "forecastIcon");
                     let castTemp = document.createElement("p");
                     let castDayP = document.createElement("p");
-                    castTemp.textContent = item.main.temp;
+                    castTemp.textContent = Math.round(item.main.temp) + "°";
                     castDayP.textContent = castDate.toLocaleString("default", {
                       weekday: "short",
                     });

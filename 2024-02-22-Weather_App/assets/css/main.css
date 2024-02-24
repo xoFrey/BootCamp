@@ -1,16 +1,123 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Comfortaa;
+  src: url(../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Varela;
+  src: url(../fonts/Varela_Round/VarelaRound-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-family: Comfortaa;
+  color: white;
+}
+
+.wrapper {
+  background: url(../img/background.png) no-repeat center;
+  margin: 0 auto;
+
+  width: 417px;
+  height: 872px;
+}
+
+.city-info img {
+}
+.day {
+  background: linear-gradient(
+      hsla(198, 95%, 77%, 0.556),
+      hsla(210, 80%, 33%, 0.794),
+      rgb(1, 5, 64)
+    )
+    center;
+  width: 417px;
+  height: 872px;
+}
+.night {
+  background: linear-gradient(
+      hsl(242, 71%, 29%),
+      hsla(266, 49%, 35%, 0.8),
+      rgb(16, 1, 33)
+    )
+    center;
+  width: 417px;
+  height: 872px;
+}
+
+/* ! Header  */
+
 header {
   display: flex;
   justify-content: space-between;
-  padding: 1vw;
+  align-items: center;
+  padding: 3vw;
   margin-bottom: 20px;
 }
 
+.reload {
+  background: url(../img/reloadbtn.svg) no-repeat center;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  border-radius: 5px;
+  height: 20px;
+  width: 20px;
+  padding: 3vw;
+  border: 0;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.search {
+  background: url(../img/magnifyingglass.svg) no-repeat center;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border: 0;
+}
+
+.home {
+  background: url(../img/home.svg) no-repeat center;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  border-radius: 5px;
+  height: 20px;
+  width: 20px;
+  padding: 3vw;
+  border: 0;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border: 1px solid rgba(255, 255, 255, 0.289);
+  padding: 1vw;
+  width: 200px;
+  border-radius: 20px;
+  color: white;
+  outline: none;
+}
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+  padding: 1vw;
+}
+
+/* ! Main */
 main {
   display: flex;
   flex-direction: column;
@@ -24,17 +131,25 @@ main {
   align-items: center;
 }
 
-h4 {
+.description {
+  text-transform: capitalize;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: -10px;
   margin-bottom: 20px;
 }
 
-img {
+h4 {
+  font-size: 22px;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 h2 {
+  font-family: Poppins;
   margin-bottom: 20px;
-  font-size: 60px;
+  font-weight: 400;
+  font-size: 68px;
 }
 
 h2::after {
@@ -43,25 +158,46 @@ h2::after {
 
 .date-time {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.date-time p {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.date-time p:nth-of-type(1)::after {
+  content: "|";
+  padding-left: 5px;
 }
 
 .info-box {
-  display: flex;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(145, 115, 255, 0.12)
+  );
 
-  gap: 20px;
+  border-radius: 20px;
+  padding: 2vw 4vw;
+  display: flex;
+  margin-bottom: 40px;
+  gap: 40px;
 }
 
 .info-box div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+}
+
+.info-box div p:nth-of-type(2) {
+  margin-bottom: 10px;
 }
 
 .info-box div img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 .forecast {
@@ -72,14 +208,44 @@ h2::after {
   width: 80%;
   padding: 2vw;
 }
+.forecast div h6 {
+  font-size: 16px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
 
 .forecast-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  gap: 12px;
+}
+
+.forecast-grid div {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(110, 73, 246, 0.12)
+  );
+
+  border-radius: 20px;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .forecastIcon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.cloudiness p {
+  font-size: 14px;
+}
+
+.humidity p {
+  font-size: 14px;
+}
+.windspeed p {
+  font-size: 14px;
 }

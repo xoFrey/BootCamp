@@ -6,40 +6,44 @@
     <title>Landingpage</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body id="main">
-    <header>
-      <input type="button" value="Home" onclick="myPosition()" />
-      <input type="text" id="inputCity" placeholder="Search for city" />
-      <input type="button" value="Reload" onclick="weatherData()" />
-    </header>
-    <main>
-      <section class="city-info"></section>
-      <div class="date-time"></div>
-      <article class="info-box">
-        <div class="cloudiness">
-          <img src="./assets/img/justcloudy.svg" alt="cloud" />
-        </div>
-        <div class="humidity">
-          <img src="./assets/img/drips.svg" alt="drops" />
-        </div>
-        <div class="windspeed">
-          <img src="./assets/img/windspeeeeeeed.svg" alt="wind" />
-        </div>
-      </article>
-      <div class="forecast">
-        <div>
-          <p>5 day forcast</p>
-        </div>
-        <article class="forecast-grid">
-          <!-- # IN JS ERSTELLEN UND IN P und so appenden -->
-          <!-- <div>
-            <p></p>
-            <img src="" alt="" />
-            <p></p>
-          </div> -->
-        </article>
+  <body>
+    <div class="wrapper">
+      <div class="night day">
+        <header>
+          <input type="button" class="home" onclick="myPosition()" />
+          <div class="searchbar">
+            <input type="text" id="inputCity" placeholder="Search for city" />
+            <input type="button" class="search" onclick="weatherData()" />
+          </div>
+          <input
+            type="button"
+            class="reload"
+            onclick="window.location.reload()"
+          />
+        </header>
+        <main>
+          <section class="city-info"></section>
+          <div class="date-time"></div>
+          <article class="info-box">
+            <div class="cloudiness">
+              <img src="./assets/img/justcloudy.svg" alt="cloud" />
+            </div>
+            <div class="humidity">
+              <img src="./assets/img/drips.svg" alt="drops" />
+            </div>
+            <div class="windspeed">
+              <img src="./assets/img/windspeeeeeeed.svg" alt="wind" />
+            </div>
+          </article>
+          <div class="forecast">
+            <div>
+              <h6>Weekly Forecast</h6>
+            </div>
+            <article class="forecast-grid"></article>
+          </div>
+        </main>
+        <script src="./assets/js/main.js"></script>
       </div>
-    </main>
-    <script src="./assets/js/main.js"></script>
+    </div>
   </body>
 </html>
