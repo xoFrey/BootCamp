@@ -270,7 +270,6 @@ const currentWeather = (lat, lon, name) => {
               let localYear = localDate.getFullYear();
               let localString = `${localDay}-${localMonth}-${localYear}`;
               forecast.innerHTML = "";
-              // # ----------------------------------------
               castData.list.forEach((item) => {
                 console.log(item);
 
@@ -307,38 +306,6 @@ const currentWeather = (lat, lon, name) => {
                   }
                 }
               });
-
-              // # INSERT ICON
-              // weatherIcons(
-              //   castData.list[7].weather[0].main,
-              //   weekIconOne,
-              //   dayOne,
-              //   castData.list[7].main.temp
-              // );
-              // weatherIcons(
-              //   castData.list[15].weather[0].main,
-              //   weekIconTwo,
-              //   dayTwo,
-              //   castData.list[15].main.temp
-              // );
-              // weatherIcons(
-              //   castData.list[23].weather[0].main,
-              //   weekIconThree,
-              //   dayThree,
-              //   castData.list[23].main.temp
-              // );
-              // weatherIcons(
-              //   castData.list[31].weather[0].main,
-              //   weekIconFour,
-              //   dayFour,
-              //   castData.list[31].main.temp
-              // );
-              // weatherIcons(
-              //   castData.list[39].weather[0].main,
-              //   weekIconFive,
-              //   dayFive,
-              //   castData.list[39].main.temp
-              // );
             })
             .catch((err) => console.log("problem mit forecast", err));
         });
