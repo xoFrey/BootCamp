@@ -148,7 +148,6 @@ const currentWeather = (lat, lon, name) => {
       )
         .then((res) => res.json())
         .then((data) => {
-          // # In eine Funktion auslagern mit parametern
           let iso = data.localTime;
           let localDate = new Date(iso);
 
