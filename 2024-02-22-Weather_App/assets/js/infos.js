@@ -62,7 +62,7 @@ const weatherInfo = (lat, lon, name) => {
       max.appendChild(tempMax);
 
       // :Feels Like
-      tempFeel.textContent = data.main.feels_like + "°";
+      tempFeel.textContent = Math.round(data.main.feels_like) + "°";
       feel.appendChild(tempFeel);
 
       // : Humidity
