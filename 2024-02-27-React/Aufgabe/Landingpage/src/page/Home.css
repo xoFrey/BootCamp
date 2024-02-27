@@ -1,0 +1,33 @@
+.home p {
+  padding-inline: 2vw;
+}
+
+.button {
+  border: 1px solid var(--textcolor);
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.home span,
+header h2 {
+  color: var(--namecolor);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--headlinescolor);
+}
+
+a,
+p {
+  color: var(--textcolor);
+}
+
+.homep {
+  margin-bottom: 50px;
+}
+
+.home p:nth-of-type(2) {
+  padding-bottom: 50px;
+}

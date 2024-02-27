@@ -1,0 +1,12 @@
+.skills article {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-inline: 20vw;
+  margin-bottom: 50px;
+}
+.skills article a {
+  padding: 10px 20px;
+  background-color: var(--sectioncolor);
+}
