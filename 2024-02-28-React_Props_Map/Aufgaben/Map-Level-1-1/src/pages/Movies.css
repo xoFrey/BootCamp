@@ -1,0 +1,6 @@
+.info-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  padding: 2vw 10vw;
+  gap: 20px;
+}
