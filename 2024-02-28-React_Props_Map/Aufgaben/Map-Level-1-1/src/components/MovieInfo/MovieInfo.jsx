@@ -1,3 +1,4 @@
+import Stars from "../Stars/Stars";
 import "./MovieInfo.css";
 const MovieInfo = (props) => {
   return (
@@ -5,9 +6,11 @@ const MovieInfo = (props) => {
       <h3>{props.movie.title}</h3> <p>{props.movie.year}</p>
       <p>{props.movie.director}</p>
       <p>{props.movie.duration}</p>
-      <p>{props.movie.rate}</p>
-      {props.movie.genre.map((genre) => (
-        <p>{genre}</p>
+      <p>
+        <Stars rate={props.movie.rate} />
+      </p>
+      {props.movie.genre.map((genre, index) => (
+        <p key={index}>{genre}</p>
       ))}
     </div>
   );
