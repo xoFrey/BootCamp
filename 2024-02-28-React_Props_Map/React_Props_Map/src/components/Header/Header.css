@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  padding: 2vw;
+}
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+nav a {
+  padding: 0 2vw;
+}
+
+header div img {
+  width: 50px;
+}
