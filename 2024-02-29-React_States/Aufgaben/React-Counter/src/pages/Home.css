@@ -1,0 +1,24 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+}
+
+p {
+  padding-inline: 4vw;
+}
+
+section div button {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
