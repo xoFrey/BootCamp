@@ -1,0 +1,15 @@
+h3,
+h1 {
+  text-align: center;
+}
+
+.counter-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.counter button {
+  width: 30px;
+  height: 30px;
+}

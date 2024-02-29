@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  padding: 2vw;
+}
+header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+nav a {
+  padding: 0 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+header div img {
+  width: 50px;
+}
+
+.dark {
+  background-color: rgb(67, 67, 67);
+  color: white;
+}
+
+.dark a {
+  color: white;
+  text-decoration: none;
+}

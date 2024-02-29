@@ -1,0 +1,28 @@
+.faq {
+  background-color: rgb(61, 61, 61);
+  color: white;
+  padding: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer {
+  display: none;
+}
+
+.border {
+  border-top: 1px solid white;
+  margin: 0 20px;
+}
+
+.show {
+  display: block;
+  background-color: rgb(61, 61, 61);
+  color: white;
+  padding: 1vw;
+}
+
+p {
+  padding-left: 20px;
+}
