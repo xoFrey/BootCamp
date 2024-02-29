@@ -1,0 +1,24 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: white;
+
+  border: 1px solid black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
