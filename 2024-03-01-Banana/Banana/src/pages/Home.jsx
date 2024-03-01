@@ -7,15 +7,31 @@ const Home = () => {
 
   const einzahlen = (event) => {
     event.preventDefault();
-    setBetrag(Number(input) + Number(betrag));
+    if (input < 0) {
+      setBetrag(Number(input * -1) + Number(betrag));
+      setInput("");
+    } else {
+      setBetrag(Number(input) + Number(betrag));
+      setInput("");
+    }
   };
 
   const auszahlen = (event) => {
     event.preventDefault();
-    if (betrag >= input) {
-      setBetrag(Number(betrag) - Number(input));
+    if (input < 0) {
+      if (betrag >= input) {
+        setBetrag(Number(betrag) - Number(input * -1));
+        setInput("");
+      } else {
+        window.alert("Versuch nicht etwas abzuheben, was da nicht ist.");
+      }
     } else {
-      window.alert("Versuch nicht etwas abzuheben, was da nicht ist.");
+      if (betrag >= input) {
+        setBetrag(Number(betrag) - Number(input));
+        setInput("");
+      } else {
+        window.alert("Versuch nicht etwas abzuheben, was da nicht ist.");
+      }
     }
   };
 
@@ -36,6 +52,7 @@ const Home = () => {
               id="input"
               onChange={(event) => setInput(event.target.value)}
               value={input}
+              min={0}
             />
             <div>
               <button className="einzahlen" onClick={einzahlen}>
