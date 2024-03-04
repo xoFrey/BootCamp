@@ -1,0 +1,8 @@
+.super-dark {
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+
+.super-dark a {
+  color: white;
+}

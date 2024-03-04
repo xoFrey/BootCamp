@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(248, 232, 202);
+  height: 50px;
+}
+
+header nav {
+  padding: 2vw;
+}
+
+header a {
+  padding: 2vw;
+  margin: 10px;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(32, 200, 158);
+  border-radius: 20px;
+  color: white;
+}
+
+.active {
+  font-weight: bold;
+  background-color: rgb(5, 120, 91);
+}

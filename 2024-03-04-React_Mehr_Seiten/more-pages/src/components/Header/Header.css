@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+}
+
+header a {
+  padding: 1vw;
+  text-decoration: none;
+  color: black;
+}
+
+.dark {
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+
+.dark a {
+  color: white;
+}
+
+.active {
+  font-weight: bold;
+  color: red;
+}
