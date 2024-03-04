@@ -1,0 +1,24 @@
+/* header {
+  background: url(../../../public/img/75b47c2ccf8ee4f6b4cdefe8a5b4b349.jpeg)
+    no-repeat center;
+  background-size: cover;
+  width: 100vw;
+  height: 50vh;
+} */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+}
+
+header a {
+  text-decoration: none;
+  padding: 2vw;
+  color: rgb(0, 0, 0);
+}
+
+.active {
+  font-weight: bold;
+}

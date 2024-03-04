@@ -1,0 +1,27 @@
+.info {
+  text-align: right;
+}
+
+.info article div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 10vw 20px 40vw;
+  gap: 30px;
+}
+
+.info img {
+  width: 1120px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.info article p {
+  text-align: left;
+  margin: 0 0 0 40vw;
+}
+
+.info article div h3 {
+  text-align: left;
+}
