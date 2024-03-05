@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  padding: 2vw;
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  font-weight: bold;
+}
