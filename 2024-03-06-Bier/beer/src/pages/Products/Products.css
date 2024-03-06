@@ -1,0 +1,49 @@
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.beer article {
+  margin-bottom: 30px;
+}
+
+.beer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+  width: 80vw;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+}
+.beer img {
+  width: 95px;
+  margin-bottom: 20px;
+}
+
+.beer h2 {
+  font-size: 30px;
+}
+
+.beer h4 {
+  font-size: 18px;
+  color: #ffca41;
+  font-weight: 900;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.beer h5 {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.beer a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  background-color: #ffca41;
+  padding: 5px 20px;
+  border-radius: 40px;
+}

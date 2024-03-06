@@ -16,7 +16,6 @@ function App() {
           <Route path="/detail/:id" element={<Detail />} />
           <Route path="/random" element={<Random />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </main>
   );

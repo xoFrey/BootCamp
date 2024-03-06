@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "./Random.css";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 const Random = () => {
   const [beer, setBeer] = useState([]);
@@ -15,19 +15,29 @@ const Random = () => {
   console.log(beer);
 
   return (
-    <section className="random">
+    <section className="detail">
       {beer ? (
-        <div>
+        <article>
           <img src={beer.image_url} alt="" />
           <h3>{beer.name}</h3>
-          <p>{beer.tagline}</p>
-          <p>{beer.first_brewed}</p>
-          <p>{beer.attenuation_level}</p>
+          <h4>{beer.tagline}</h4>
+          <div>
+            <h6>First brewed:</h6>
+            <h6>{beer.first_brewed}</h6>
+          </div>
+          <div>
+            <h6>Attenuation level:</h6>
+            <h6>{beer.attenuation_level}</h6>
+          </div>
           <p>{beer.description}</p>
-        </div>
+          <Link to="/">
+            <img className="button" src="../../../public/img/Back.svg" alt="" />
+          </Link>
+        </article>
       ) : (
         <p>Loading...</p>
-      )}
+      )}{" "}
+      <Footer />
     </section>
   );
 };

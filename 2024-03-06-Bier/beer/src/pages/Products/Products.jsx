@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Products.css";
+import Footer from "../../components/Footer/Footer";
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -18,16 +19,20 @@ const Products = () => {
       {products ? (
         products.map((item, index) => (
           <div key={index} className="beer">
-            <h2>{item.name}</h2>
-            <p>{item.tagline}</p>
-            <h4>created by: {item.name}</h4>
             <img src={item.image_url} alt="beer" />
-            <Link to={`/detail/${item._id}`}>Details</Link>
+            <article>
+              <h2>{item.name}</h2>
+              <h4>{item.tagline}</h4>
+              <h5>created by: {item.name}</h5>
+
+              <Link to={`/detail/${item._id}`}>Details</Link>
+            </article>
           </div>
         ))
       ) : (
         <p>Loading...</p>
-      )}
+      )}{" "}
+      <Footer />
     </section>
   );
 };
