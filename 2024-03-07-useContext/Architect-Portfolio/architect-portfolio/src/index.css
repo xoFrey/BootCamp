@@ -1,0 +1,25 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../public/fonts/Roboto/Roboto-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 62.5%;
+}
+
+h2 {
+  font-size: 6.4rem;
+  font-weight: 300;
+  color: #bdbdbd;
+  margin-bottom: 20px;
+}

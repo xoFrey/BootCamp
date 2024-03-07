@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1vw;
+}
+
+header nav {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+
+header nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 1.9vw;
+  color: black;
+}
+
+header nav div {
+  padding-left: 2vw;
+  cursor: pointer;
+}
+
+header nav a:hover {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+header nav a:active {
+  color: rgb(198, 198, 198);
+}
+
+.active {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}

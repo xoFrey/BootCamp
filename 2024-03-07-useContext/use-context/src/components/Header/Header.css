@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a {
+  padding: 2vw;
+}
+
+header nav svg {
+  fill: gray;
+  height: 25px;
+  width: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+header nav svg:hover {
+  fill: black;
+}

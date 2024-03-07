@@ -1,0 +1,16 @@
+.statement article div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.statement article div h4 {
+  font-size: 200px;
+  color: #f2f2f2;
+}
+
+.statement article div p {
+  font-size: 2.2rem;
+  line-height: 36px;
+}

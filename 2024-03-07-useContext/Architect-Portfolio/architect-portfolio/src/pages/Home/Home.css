@@ -1,0 +1,43 @@
+.home article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+.img-container img {
+  width: 50vw;
+  max-height: 829px;
+}
+
+.img-container {
+  position: relative;
+}
+.button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 20px 50px 20px 15px;
+  background-color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  color: black;
+}
+
+.button::after {
+  content: "→";
+  padding-left: 10px;
+  margin-top: -2px;
+}
+
+.home h1 {
+  font-size: clamp(1.5rem, 5vw, 6.4rem);
+  max-width: 9ch;
+}
+.home h1 span {
+  color: #bdbdbd;
+  font-weight: 300;
+  text-transform: uppercase;
+}
