@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: DMSans;
+  src: url(../public/DMSans_24pt-Regular.ttf);
+}
+
+html {
+  font-family: DMSans;
+  scroll-behavior: smooth;
+}
